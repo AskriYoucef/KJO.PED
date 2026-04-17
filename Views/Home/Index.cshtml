@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Overview";
+}
+
+<div class="row">
+    <div class="col-md-8">
+        <h1>Overview</h1>
+        <p class="lead">Bienvenue sur l'intranet PED. Utilisez la navigation pour accéder aux sections principales.</p>
+
+        <section class="mt-4">
+            <h2>Weekly Highlights</h2>
+            <p>Soumettez, révisez et approuvez des points saillants hebdomadaires.</p>
+            <p>
+                <a class="btn btn-primary" asp-controller="WeeklyHighlights" asp-action="Submit">Soumettre</a>
+                <a class="btn btn-secondary" asp-controller="WeeklyHighlights" asp-action="Review">Revue</a>
+            </p>
+        </section>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Ressources</h5>
+                <ul class="list-unstyled mb-0">
+                    <li>Policies & Procedures</li>
+                    <li>Documents</li>
+                    <li>Company Directory</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

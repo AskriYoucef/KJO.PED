@@ -1,0 +1,32 @@
+@model IEnumerable<KJO.PED.Models.WeeklyHighlight>
+@{
+    ViewData["Title"] = "Weekly Highlights";
+}
+
+<h1>Weekly Highlights</h1>
+<p>
+    <a class="btn btn-primary" asp-action="Submit">Soumettre un highlight</a>
+    <a class="btn btn-secondary" asp-action="Review">Revue</a>
+</p>
+
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Submitted</th>
+            <th>By</th>
+            <th>Approved</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.Title</td>
+            <td>@item.SubmittedAt.ToLocalTime().ToString("g")</td>
+            <td>@item.SubmittedBy</td>
+            <td>@(item.IsApproved ? "Yes" : "No")</td>
+        </tr>
+    }
+    </tbody>
+</table>

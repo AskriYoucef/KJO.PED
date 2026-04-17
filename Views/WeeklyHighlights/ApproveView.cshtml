@@ -1,0 +1,19 @@
+@model KJO.PED.Models.WeeklyHighlight
+@{
+    ViewData["Title"] = "Approve Highlight";
+}
+
+<h1>Approve Highlight</h1>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Title</h5>
+        <p class="card-text">@Model.Description</p>
+        <p class="text-muted">Submitted by @Model.SubmittedBy on @Model.SubmittedAt.ToLocalTime().ToString("g")</p>
+        <form asp-action="Approve" method="post">
+            <input type="hidden" name="id" value="@Model.Id" />
+            <button type="submit" class="btn btn-success">Approve</button>
+            <a class="btn btn-secondary" asp-action="Review">Back</a>
+        </form>
+    </div>
+</div>
