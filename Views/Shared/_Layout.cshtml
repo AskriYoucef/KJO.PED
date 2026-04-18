@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,27 +10,62 @@
     <link rel="stylesheet" href="~/KJO.PED.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PED Intranet</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+    <header class="site-header">
+        <!-- Banner compact: keep slim to reduce vertical whitespace -->
+        <div class="header-banner-wrapper">
+            <img src="~/images/header-banner.png" alt="PED Banner" class="header-banner img-fluid" />
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+            <div class="container">
+                <!-- Brand (small) -->
+                <a class="navbar-brand d-flex align-items-center pe-3" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/logo-small.png" alt="KJO.PED" class="me-2" style="height:36px; width:auto;" onerror="this.style.display='none'" />
+                    <div class="d-none d-lg-block">
+                        <div class="brand-title">KJO.PED</div>
+                        <div class="brand-sub">PED Intranet</div>
+                    </div>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Overview</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Organization" asp-action="Index">Organization</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="DivisionsRoles" asp-action="Index">Divisions &amp; Roles</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Applications" asp-action="Index">Applications</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Policies" asp-action="Index">Policies &amp; Procedures</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="Documents" asp-action="Index">Documents</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="News" asp-action="Index">News &amp; Announcements</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="CompanyDirectory" asp-action="Index">Company Directory</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="EmployeeAccess" asp-action="Index">Employee Access</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-controller="WeeklyHighlights" asp-action="Index">Weekly Highlights</a></li>
+
+                <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+                    <ul class="navbar-nav nav-center">
+                        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Overview</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Organization" asp-action="Index">Organization</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="DivisionsRoles" asp-action="Index">Divisions &amp; Roles</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Applications" asp-action="Index">Applications</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Policies" asp-action="Index">Policies &amp; Procedures</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Documents" asp-action="Index">Documents</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="News" asp-action="Index">News &amp; Announcements</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="CompanyDirectory" asp-action="Index">Company Directory</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="EmployeeAccess" asp-action="Index">Employee Access</a></li>
                     </ul>
+                </div>
+
+                <!-- User area -->
+                <div class="user-area d-flex align-items-center ms-3">
+                    @if (User?.Identity?.IsAuthenticated ?? false)
+                    {
+                        <div class="dropdown">
+                            <a class="d-flex align-items-center text-decoration-none dropdown-toggle user-link" href="#" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="~/images/avatar-placeholder.png" alt="avatar" class="avatar" />
+                                <span class="ms-2 d-none d-md-inline">@User.Identity.Name</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
+                                <li><a class="dropdown-item" asp-controller="Account" asp-action="Profile">Profile</a></li>
+                                <li><a class="dropdown-item" asp-controller="Account" asp-action="Settings">Settings</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><form asp-controller="Account" asp-action="Logout" method="post" class="m-0"><button type="submit" class="dropdown-item">Sign out</button></form></li>
+                            </ul>
+                        </div>
+                    }
+                    else
+                    {
+                        <a class="btn btn-outline-primary btn-sm" asp-controller="Account" asp-action="Login">Sign in</a>
+                    }
                 </div>
             </div>
         </nav>

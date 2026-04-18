@@ -29,3 +29,93 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+/* Custom header styles for a modern, corporate oil & gas look */
+:root{
+  --brand-dark: #0b2447; /* deep navy */
+  --brand-accent: #c49a2e; /* muted gold */
+  --muted: #6c757d;
+  --header-bg: #ffffff;
+}
+
+.site-header {
+  background: var(--header-bg);
+  border-bottom: 1px solid rgba(11,36,71,0.06);
+  z-index: 1030; /* above content */
+}
+
+.navbar-brand {
+  gap: .5rem;
+}
+
+.brand-title{ font-weight:700; color:var(--brand-dark); }
+.brand-sub{ font-size:0.80rem; color:var(--muted); }
+
+.nav-center {
+  display:flex;
+  gap: .25rem;
+  align-items:center;
+}
+
+.nav-center .nav-link{
+  color:var(--brand-dark);
+  padding: .5rem .9rem;
+  font-size: .95rem;
+  font-weight:500;
+  text-transform: none;
+  border-radius: .375rem;
+}
+
+.nav-center .nav-link:hover,
+.nav-center .nav-link:focus{
+  background: rgba(11,36,71,0.04);
+  color: var(--brand-dark);
+  text-decoration: none;
+}
+
+.user-area .avatar{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid rgba(11,36,71,0.06);
+}
+
+.user-link{ color:var(--brand-dark); }
+.user-link:hover{ text-decoration:none; }
+
+/* Small screens: allow horizontal scroll if many items */
+@media (max-width: 575.98px){
+  .nav-center{ overflow-x:auto; padding-bottom:.25rem; -webkit-overflow-scrolling:touch; }
+  .nav-center .nav-link{ white-space:nowrap; }
+}
+
+@media (min-width:992px){
+  .nav-center .nav-link{ padding: .6rem 1rem; }
+}
+
+.dropdown-menu{ min-width:10rem; }
+
+/* layout / content spacing */
+body{ padding-top: 0; }
+main[role="main"]{ margin-top: .5rem; }
+
+/* Banner: compact, show important left area and crop softly */
+.header-banner-wrapper{ display:block; overflow:hidden; background:#fff; }
+.header-banner{ display:block; width:100%; height:auto; max-height:110px; object-fit:cover; object-position: left center; }
+
+@media (min-width:1200px){
+  .header-banner{ max-height:140px; }
+}
+
+/* Hide brand text on large screens when the banner already shows the department name */
+@media (min-width:992px){
+  .navbar-brand .brand-sub{ display:none; }
+}
+
+/* Navbar visual tweaks */
+.navbar{ padding-top:.35rem; padding-bottom:.35rem; }
+.container{ max-width:1100px; }
+
+/* Footer spacing */
+.footer{ padding:1rem 0; }
