@@ -1,0 +1,130 @@
+@{
+    ViewData["Title"] = "Employee Access";
+}
+
+<section class="page-section">
+    <div class="content-card mb-4">
+        <div class="section-kicker">Employee Access</div>
+        <h1 class="card-title-main">Employee services, support and contact points</h1>
+        <p class="page-text mb-0">
+            Quick access to useful internal services, support references and common KJO contact information.
+        </p>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-md-6 col-xl-3">
+            <div class="info-card h-100">
+                <h3 class="info-card-title">Operational Calendar</h3>
+                <p class="info-card-text">
+                    Open the annual operational calendar directly from the portal.
+                </p>
+                <div class="action-row">
+                    <a class="btn-pill-outline"
+                       href="https://www.kjo.com.sa/irj/go/km/docs/documents/KJOWebSite/OPERATIONALCALANDER_EN_2026.pdf"
+                       target="_blank" rel="noopener">
+                        Open
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3">
+            <div class="info-card h-100">
+                <h3 class="info-card-title">Reference Documents</h3>
+                <p class="info-card-text">
+                    Open procedures, templates and general PED reference materials.
+                </p>
+                <div class="action-row">
+                    <a class="btn-pill-outline" asp-controller="Home" asp-action="Documents">Open</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3">
+            <div class="info-card h-100">
+                <h3 class="info-card-title">Directory</h3>
+                <p class="info-card-text">
+                    Browse internal contacts and future synchronized directory information.
+                </p>
+                <div class="action-row">
+                    <a class="btn-pill-outline" asp-controller="Home" asp-action="CompanyDirectory">Open</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3">
+            <div class="info-card h-100">
+                <h3 class="info-card-title">Weekly Highlights</h3>
+                <p class="info-card-text">
+                    Review the future workflow area for weekly submission and tracking.
+                </p>
+                <div class="action-row">
+                    <a class="btn-pill-outline" asp-controller="Home" asp-action="WeeklyHighlights">Open</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-card mb-4">
+        <div class="section-kicker">Common Contact Information</div>
+        <h2 class="quick-card-title">KJO contact points</h2>
+        <p class="page-text">
+            Below is a practical contact section inspired by the KJO “Contact Us” information you shared.
+        </p>
+    </div>
+
+    <div class="contact-grid">
+        <div class="contact-block">
+            <h3>Al-Khafji Joint Operations</h3>
+            <p>
+                P.O.Box : 688<br />
+                Al-Khafji 31971<br />
+                Kingdom of Saudi Arabia
+            </p>
+        </div>
+
+        <div class="contact-block">
+            <h3>IT Technical Issues</h3>
+            <p>
+                Tel: <a href="tel:+966137654403">(+966) 13765 4403</a><br />
+                Email: <a href="mailto:SLP-Support@kjo.com.sa">SLP-Support@kjo.com.sa</a>
+            </p>
+        </div>
+
+        <div class="contact-block">
+            <h3>Contract Department (Registrations)</h3>
+            <p>
+                Tel: <a href="tel:+966137656208">(+966) 13765 6208</a><br />
+                Whatsapp: <a href="tel:+966557961814">+966 557961814</a><br />
+                Email: <a href="mailto:ctdregister@kjo.com.sa">ctdregister@kjo.com.sa</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="contact-grid mt-4">
+        <div class="contact-block">
+            <h3>Supply Chain Department (Registrations)</h3>
+            <p>
+                Tel: <a href="tel:+966137656678">(+966) 13765 6678</a><br />
+                Email: <a href="mailto:badarali@kjo.com.sa">badarali@kjo.com.sa</a>
+            </p>
+        </div>
+
+        <div class="contact-block">
+            <h3>Portal Guidance</h3>
+            <p>
+                This section can later host direct links to employee systems, request forms,
+                support workflows and internal service access pages.
+            </p>
+        </div>
+
+        <div class="contact-block">
+            <h3>Future Improvement</h3>
+            <p>
+                We can later split this page into two separate pages:
+                <strong>Employee Access</strong> and <strong>Contact Us</strong>,
+                if you want a structure closer to the public KJO website.
+            </p>
+        </div>
+    </div>
+</section>

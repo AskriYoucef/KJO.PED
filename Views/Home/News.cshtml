@@ -1,0 +1,69 @@
+@{
+    ViewData["Title"] = "News";
+}
+
+<section class="page-section">
+    <div class="content-card mb-4">
+        <div class="section-kicker">News</div>
+        <h1 class="card-title-main">News & announcements</h1>
+        <p class="page-text mb-0">
+            Stay informed about internal updates, department communications and important announcements.
+        </p>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-lg-8">
+            <div class="content-card h-100">
+                <div class="section-kicker">Featured Announcement</div>
+                <h2 class="quick-card-title">Department communication space</h2>
+                <p class="page-text">
+                    This page can be used to publish internal announcements, schedule updates,
+                    department notices, meeting reminders and management communications.
+                </p>
+                <p class="page-text mb-0">
+                    It can later be connected to a database-backed module so administrators can publish news dynamically.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="content-card h-100">
+                <h2 class="quick-card-title">Quick Links</h2>
+                <ul class="quick-links list-unstyled mb-0">
+                    <li><a asp-controller="Home" asp-action="WeeklyHighlights">Weekly Highlights</a></li>
+                    <li><a asp-controller="Home" asp-action="Documents">Reference Documents</a></li>
+                    <li><a asp-controller="Home" asp-action="EmployeeAccess">Contact & Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-6 col-xl-4">
+            <div class="info-card h-100">
+                <h3 class="info-card-title">Department Updates</h3>
+                <p class="info-card-text">
+                    Publish short updates about activities, initiatives and operational coordination topics.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4">
+            <div class="info-card h-100">
+                <h3 class="info-card-title">Official Announcements</h3>
+                <p class="info-card-text">
+                    Use this area for official notices, instructions and important communications.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4">
+            <div class="info-card h-100">
+                <h3 class="info-card-title">Upcoming Events</h3>
+                <p class="info-card-text">
+                    Highlight future meetings, deadlines, department reviews and planned internal events.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

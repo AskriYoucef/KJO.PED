@@ -1,6 +1,87 @@
-@{
-    ViewData["Title"] = "Company Directory";
-}
+@model KJO.PED.ViewModels.CompanyDirectoryViewModel
 
-<h1>Company Directory</h1>
-<p>Annuaire de l'entreprise (placeholder).</p>
+<section class="directory-page-section">
+    <div class="page-shell">
+        <div class="directory-hero">
+            <span class="section-kicker">Company Directory</span>
+            <h1>PED Company Directory</h1>
+            <p>
+                Search and filter PED personnel information by name, position, section, email, phone number or office extension.
+                This demo version updates the table instantly while typing or changing the section.
+                Later, the same page can be connected to an Oracle table.
+            </p>
+        </div>
+
+        <div class="directory-filter-card">
+            <div class="directory-filter-form">
+                <div class="form-field-inline">
+                    <label for="directorySearch">Search</label>
+                    <input type="text" id="directorySearch"
+                           placeholder="Search by name, position, section, email, phone or extension" />
+                </div>
+
+                <div class="form-field-inline">
+                    <label for="directorySection">Section</label>
+                    <select id="directorySection">
+                        <option value="">All sections</option>
+                        @foreach (var item in Model.AvailableSections)
+                        {
+                            <option value="@item">@item</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="directory-filter-actions">
+                    <button type="button" id="directoryReset" class="btn-directory-secondary">Clear filters</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="directory-results-bar">
+            <div class="directory-results-count"><span id="directoryResultCount">@Model.Employees.Count</span> result(s) found</div>
+            <div class="directory-note">Demo version - Oracle integration will come later.</div>
+        </div>
+
+        <div class="directory-table-card">
+            <div class="directory-table-wrap">
+                <table class="directory-table" id="directoryTable">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Position</th>
+                            <th>Section</th>
+                            <th>Email</th>
+                            <th>Phone Number</th>
+                            <th>Office Extension</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var person in Model.Employees)
+                        {
+                            <tr class="directory-row"
+                                data-section="@person.Section"
+                                data-search="@person.SearchIndex.ToLowerInvariant()">
+                                <td class="directory-person-name">@person.FullName</td>
+                                <td>@person.Position</td>
+                                <td>@person.Section</td>
+                                <td>
+                                    <a class="directory-email-link" href="mailto:@person.Email">@person.Email</a>
+                                </td>
+                                <td>@person.PhoneNumber</td>
+                                <td>@person.OfficeExtension</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="directory-empty" id="directoryEmptyState" style="display:none;">
+                No result matches the current search criteria.
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/js/company-directory.js" asp-append-version="true"></script>
+}

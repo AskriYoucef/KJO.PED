@@ -2,46 +2,112 @@
     ViewData["Title"] = "Overview";
 }
 
-<section class="hero py-4">
-    <div class="container d-flex flex-column flex-md-row align-items-start gap-4">
-        <div class="hero-left">
-            <h1 class="display-6">Overview</h1>
-            <p class="lead text-muted">Bienvenue sur l'intranet du Petroleum Engineering & Exploration Department. Accédez rapidement aux outils et ressources ci‑dessous.</p>
-            <div class="mt-3">
-                <a class="btn btn-primary me-2" asp-controller="Home" asp-action="Index">Commencer</a>
-                <a class="btn btn-outline-secondary" asp-controller="Documents" asp-action="Index">Documents</a>
+<section class="page-section">
+    <div class="row g-4 mb-4">
+        <div class="col-lg-8">
+            <div class="content-card h-100">
+                <div class="section-kicker">Overview</div>
+                <h1 class="card-title-main">A central entry point for PED teams</h1>
+
+                <p class="page-text">
+                    The PED Portal brings together the most important department resources in one place:
+                    internal applications, reference documents, procedures, announcements and employee services.
+                </p>
+
+                <p class="page-text mb-0">
+                    Its purpose is to simplify access to information, improve internal coordination,
+                    and provide a clear digital workspace for employees, supervisors and department management.
+                </p>
+
+                <div class="action-row">
+                    <a class="btn-pill-primary" asp-controller="Home" asp-action="Applications">Open Applications</a>
+                    <a class="btn-pill-outline" asp-controller="Home" asp-action="Documents">Browse Documents</a>
+                    <a class="btn-pill-outline" asp-controller="Home" asp-action="WeeklyHighlights">Weekly Highlights</a>
+                </div>
             </div>
         </div>
 
-        <aside class="hero-right ms-auto" style="min-width:220px;">
-            <div class="card shadow-sm">
-                <div class="card-body py-3">
-                    <h6 class="mb-2">Ressources rapides</h6>
-                    <ul class="list-unstyled mb-0">
-                        <li><a href="/Policies" class="small">Policies &amp; Procedures</a></li>
-                        <li><a href="/Documents" class="small">Documents</a></li>
-                        <li><a href="/CompanyDirectory" class="small">Company Directory</a></li>
-                    </ul>
-                </div>
+        <div class="col-lg-4">
+            <div class="content-card h-100">
+                <h2 class="quick-card-title">Quick Access</h2>
+                <ul class="quick-links list-unstyled mb-0">
+                    <li><a asp-controller="Home" asp-action="Documents">Policies & Procedures</a></li>
+                    <li><a asp-controller="Home" asp-action="Documents">Reference Documents</a></li>
+                    <li><a asp-controller="CompanyDirectory" asp-action="Index">Company Directory</a></li>
+                    <li><a asp-controller="Home" asp-action="EmployeeAccess">Employee Access</a></li>
+                    <li><a asp-controller="Home" asp-action="WeeklyHighlights">Weekly Highlights</a></li>
+                </ul>
             </div>
-
-            <div class="mt-3 text-muted small">
-                <strong>Weekly Highlights</strong>
-                <div class="mt-2">Soumettez, révisez et approuvez des points saillants hebdomadaires.</div>
-                <div class="mt-2">
-                    <a class="btn btn-sm btn-outline-primary me-2" asp-controller="WeeklyHighlights" asp-action="Submit">Soumettre</a>
-                    <a class="btn btn-sm btn-secondary" asp-controller="WeeklyHighlights" asp-action="Review">Revue</a>
-                </div>
-            </div>
-        </aside>
+        </div>
     </div>
-</section>
 
-<section class="container my-4">
-    <div class="row">
-        <div class="col-12">
-            <h3 class="h5">À la une</h3>
-            <p class="text-muted">Utilisez la navigation principale pour parcourir les sections de l'intranet. Les raccourcis à droite permettent d'accéder rapidement aux ressources les plus utilisées.</p>
+    <div class="row g-4 mb-4">
+        <div class="col-md-6 col-xl-4">
+            <div class="info-card">
+                <h3 class="info-card-title">Applications</h3>
+                <p class="info-card-text">
+                    Access internal tools, business platforms and department-specific services used by PED teams.
+                </p>
+                <div class="action-row">
+                    <a class="btn-pill-outline" asp-controller="Home" asp-action="Applications">Open Applications</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4">
+            <div class="info-card">
+                <h3 class="info-card-title">Documents & Procedures</h3>
+                <p class="info-card-text">
+                    Find policies, procedures, templates, forms and technical reference documents in one place.
+                </p>
+                <div class="action-row">
+                    <a class="btn-pill-outline" asp-controller="Home" asp-action="Documents">Open Documents</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4">
+            <div class="info-card">
+                <h3 class="info-card-title">News & Announcements</h3>
+                <p class="info-card-text">
+                    Stay informed about department updates, official announcements and important internal news.
+                </p>
+                <div class="action-row">
+                    <a class="btn-pill-outline" asp-controller="Home" asp-action="News">Open News</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-lg-6">
+            <div class="highlight-card">
+                <h3>Weekly Highlights Workflow</h3>
+                <p>
+                    The portal can later centralize weekly report submission, supervisor review,
+                    consolidation and final management dispatch.
+                </p>
+                <div class="action-row">
+                    <a class="btn-pill-primary" asp-controller="Home" asp-action="WeeklyHighlights">Open Weekly Highlights</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="highlight-card">
+                <h3>Operational Calendar 2026</h3>
+                <p>
+                    The 2026 operational calendar can be opened directly from the portal for quick consultation.
+                </p>
+                <div class="action-row">
+                    <a class="btn-pill-primary"
+                           href="https://www.kjo.com.sa/irj/go/km/docs/documents/KJOWebSite/OPERATIONALCALANDER_EN_2026.pdf"
+                           target="_blank" rel="noopener">
+                        Open Calendar PDF
+                    </a>
+                    <a class="btn-pill-outline" asp-controller="Home" asp-action="Documents">More Documents</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>

@@ -2,5 +2,64 @@
     ViewData["Title"] = "Documents";
 }
 
-<h1>Documents</h1>
-<p>Centralisez les documents partagés ici.</p>
+<section class="page-section">
+    <div class="container">
+        <div class="content-card mb-4">
+            <div class="section-kicker">Documents</div>
+            <h1 class="card-title-main">Reference documents and department resources</h1>
+            <p class="page-text mb-0">
+                Access PED reference materials, procedures, templates and internal documentation from a single location.
+            </p>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <div class="col-md-6 col-xl-4">
+                <div class="info-card h-100">
+                    <h3 class="info-card-title mb-3">Policies & Procedures</h3>
+                    <p class="info-card-text">
+                        Official procedures, internal policies and operational guidance used by PED teams.
+                    </p>
+                    <div class="action-row">
+                        <a class="btn-pill-outline" asp-controller="Policies" asp-action="Index">Open Section</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="info-card h-100">
+                    <h3 class="info-card-title mb-3">Templates & Forms</h3>
+                    <p class="info-card-text">
+                        Standardized templates, reporting formats and administrative forms for daily activities.
+                    </p>
+                    <div class="action-row">
+                        <a class="btn-pill-outline" href="#">Open Section</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="info-card h-100">
+                    <h3 class="info-card-title mb-3">Technical References</h3>
+                    <p class="info-card-text">
+                        Supporting technical notes, engineering references and documentation useful for department work.
+                    </p>
+                    <div class="action-row">
+                        <a class="btn-pill-outline" href="#">Open Section</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <div class="section-kicker">Document Structure</div>
+            <h2 class="card-title-main">Suggested categories</h2>
+            <ul class="link-list mb-0">
+                <li>Department procedures</li>
+                <li>Engineering standards and technical notes</li>
+                <li>Meeting templates and reporting formats</li>
+                <li>Official forms and administrative documents</li>
+                <li>Archived reference material</li>
+            </ul>
+        </div>
+    </div>
+</section>

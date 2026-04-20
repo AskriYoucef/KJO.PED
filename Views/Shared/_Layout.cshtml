@@ -1,87 +1,143 @@
-﻿<!DOCTYPE html>
-<html lang="fr">
+﻿@{
+    var currentPage = (ViewData["Title"]?.ToString() ?? "");
+}
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - PED Intranet</title>
-    <script type="importmap"></script>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/KJO.PED.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header class="site-header">
-        <!-- Banner compact: keep slim to reduce vertical whitespace -->
-        <div class="header-banner-wrapper">
-            <img src="~/images/header-banner.png" alt="PED Banner" class="header-banner img-fluid" />
-        </div>
+        <div class="page-shell header-inner">
+            <a class="brand-link" asp-controller="Home" asp-action="Index">
+                <img src="~/images/logo.png" asp-append-version="true" alt="KJO Logo" class="brand-logo" />
+            </a>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-            <div class="container">
-                <!-- Brand (small) -->
-                <a class="navbar-brand d-flex align-items-center pe-3" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img src="~/images/logo-small.png" alt="KJO.PED" class="me-2" style="height:36px; width:auto;" onerror="this.style.display='none'" />
-                    <div class="d-none d-lg-block">
-                        <div class="brand-title">KJO.PED</div>
-                        <div class="brand-sub">PED Intranet</div>
-                    </div>
+            <nav class="top-nav">
+                <a class="@(currentPage == "Overview" ? "active" : "")"
+                       asp-controller="Home" asp-action="Index">
+                    Overview
                 </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <a class="@(currentPage == "Organization" ? "active" : "")"
+                       asp-controller="Home" asp-action="Organization">
+                    Organization
+                </a>
 
-                <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
-                    <ul class="navbar-nav nav-center">
-                        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Overview</a></li>
-                        <li class="nav-item"><a class="nav-link" asp-controller="Organization" asp-action="Index">Organization</a></li>
-                        <li class="nav-item"><a class="nav-link" asp-controller="DivisionsRoles" asp-action="Index">Divisions &amp; Roles</a></li>
-                        <li class="nav-item"><a class="nav-link" asp-controller="Applications" asp-action="Index">Applications</a></li>
-                        <li class="nav-item"><a class="nav-link" asp-controller="Policies" asp-action="Index">Policies &amp; Procedures</a></li>
-                        <li class="nav-item"><a class="nav-link" asp-controller="Documents" asp-action="Index">Documents</a></li>
-                        <li class="nav-item"><a class="nav-link" asp-controller="News" asp-action="Index">News &amp; Announcements</a></li>
-                        <li class="nav-item"><a class="nav-link" asp-controller="CompanyDirectory" asp-action="Index">Company Directory</a></li>
-                        <li class="nav-item"><a class="nav-link" asp-controller="EmployeeAccess" asp-action="Index">Employee Access</a></li>
-                    </ul>
+                <div class="nav-item has-dropdown">
+                    <a class="nav-link @(currentPage == "Applications" ? "active" : "")"
+                           asp-controller="Home" asp-action="Applications">
+                        Applications
+                    </a>
+                    <div class="dropdown-menu-custom applications-dropdown">
+                        <a asp-controller="Home" asp-action="Applications" asp-fragment="all-applications">All Applications</a>
+                        <div class="dropdown-divider-custom"></div>
+                        <a asp-controller="Home" asp-action="Applications" asp-fragment="ped-applications">PED Applications</a>
+                        <a asp-controller="Home" asp-action="Applications" asp-fragment="kjo-applications">KJO Applications</a>
+                    </div>
                 </div>
 
-                <!-- User area -->
-                <div class="user-area d-flex align-items-center ms-3">
-                    @if (User?.Identity?.IsAuthenticated ?? false)
-                    {
-                        <div class="dropdown">
-                            <a class="d-flex align-items-center text-decoration-none dropdown-toggle user-link" href="#" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="~/images/avatar-placeholder.png" alt="avatar" class="avatar" />
-                                <span class="ms-2 d-none d-md-inline">@User.Identity.Name</span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
-                                <li><a class="dropdown-item" asp-controller="Account" asp-action="Profile">Profile</a></li>
-                                <li><a class="dropdown-item" asp-controller="Account" asp-action="Settings">Settings</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><form asp-controller="Account" asp-action="Logout" method="post" class="m-0"><button type="submit" class="dropdown-item">Sign out</button></form></li>
-                            </ul>
-                        </div>
-                    }
-                    else
-                    {
-                        <a class="btn btn-outline-primary btn-sm" asp-controller="Account" asp-action="Login">Sign in</a>
-                    }
+                <div class="nav-item has-dropdown">
+                    <a class="nav-link @(currentPage == "Documents" ? "active" : "")"
+                           asp-controller="Home" asp-action="Documents">
+                        Documents
+                    </a>
+                    <div class="dropdown-menu-custom">
+                        <a asp-controller="Home" asp-action="Documents">Policies &amp; Procedures</a>
+                        <a asp-controller="Home" asp-action="Documents">Reference Documents</a>
+                        <a href="https://www.kjo.com.sa/irj/go/km/docs/documents/KJOWebSite/OPERATIONALCALANDER_EN_2026.pdf"
+                               target="_blank" rel="noopener">
+                            Operational Calendar 2026
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-item has-dropdown">
+                    <a class="nav-link @(currentPage == "News" ? "active" : "")"
+                           asp-controller="Home" asp-action="News">
+                        News
+                    </a>
+                    <div class="dropdown-menu-custom">
+                        <a asp-controller="Home" asp-action="News">Department News</a>
+                        <a asp-controller="Home" asp-action="WeeklyHighlights">Weekly Highlights</a>
+                    </div>
+                </div>
+
+                <a class="@(currentPage == "Company Directory" ? "active" : "")"
+                       asp-controller="CompanyDirectory" asp-action="Index">
+                    Company Directory
+                </a>
+
+                <div class="nav-item has-dropdown">
+                    <a class="nav-link @(currentPage == "Employee Access" ? "active" : "")"
+                           asp-controller="Home" asp-action="EmployeeAccess">
+                        Employee Access
+                    </a>
+                    <div class="dropdown-menu-custom dropdown-menu-right">
+                        <a asp-controller="Home" asp-action="EmployeeAccess">Employee Access</a>
+                        <a asp-controller="Home" asp-action="WeeklyHighlights">Weekly Highlights</a>
+                        <a asp-controller="Home" asp-action="ContactSupport">Contact &amp; Support</a>
+                    </div>
+                </div>
+            </nav>
+
+            <a href="#" class="sign-in-btn">Sign In</a>
+        </div>
+    </header>
+
+    <main class="site-main">
+        <div class="page-shell">
+            @await Html.PartialAsync("_PedBanner")
+            @RenderBody()
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page-shell footer-inner">
+            <div class="footer-col footer-col-brand">
+                <div class="footer-brand-logo-wrap">
+                    <img src="~/images/logo_nobg1.png" alt="KJO Logo" class="footer-brand-logo" />
+                </div>
+                <h3>PED Portal</h3>
+                <p>Petroleum Engineering &amp; Exploration Department</p>
+                <p>Khafji Joint Operations</p>
+                <div class="copyright">© 2026 PED Portal. All rights reserved.</div>
+            </div>
+
+            <div class="footer-col footer-col-nav">
+                <h3>Navigation</h3>
+                <div class="footer-links-grid">
+                    <a asp-controller="Home" asp-action="Index">Overview</a>
+                    <a asp-controller="Home" asp-action="News">News</a>
+                    <a asp-controller="Home" asp-action="Organization">Organization</a>
+                    <a asp-controller="CompanyDirectory" asp-action="Index">Company Directory</a>
+                    <a asp-controller="Home" asp-action="Applications">Applications</a>
+                    <a asp-controller="Home" asp-action="EmployeeAccess">Employee Access</a>
+                    <a asp-controller="Home" asp-action="Documents">Documents</a>
+                    <a asp-controller="Home" asp-action="WeeklyHighlights">Weekly Highlights</a>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; @DateTime.Now.Year - PED Intranet
+            <div class="footer-col footer-col-access">
+                <h3>Useful Access</h3>
+                <p>
+                    Find department references, contact points, weekly highlights
+                    and the operational calendar from one place.
+                </p>
+
+                <div class="footer-cta-group">
+                    <a class="footer-mini-btn" asp-controller="Home" asp-action="Documents">Open Documents</a>
+                    <a class="footer-mini-btn" asp-controller="Home" asp-action="ContactSupport">Contact &amp; Support</a>
+                </div>
+            </div>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)

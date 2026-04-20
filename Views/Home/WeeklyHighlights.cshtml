@@ -1,0 +1,79 @@
+@{
+    ViewData["Title"] = "Weekly Highlights";
+}
+
+<section class="page-section">
+    <div class="content-card mb-4">
+        <div class="section-kicker">Weekly Highlights</div>
+        <h1 class="card-title-main">Weekly reporting workflow</h1>
+        <p class="page-text mb-0">
+            A future workflow area for weekly submission, review, consolidation and final dispatch.
+        </p>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-lg-7">
+            <div class="content-card h-100">
+                <h2 class="quick-card-title">Proposed process</h2>
+
+                <div class="workflow-step">
+                    <div class="workflow-step-number">1</div>
+                    <div>
+                        <h4>Employee submission</h4>
+                        <p class="page-text">
+                            Each employee enters the weekly highlights and submits the report through the portal.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <div class="workflow-step-number">2</div>
+                    <div>
+                        <h4>Supervisor review</h4>
+                        <p class="page-text">
+                            The designated supervisor reviews, validates or returns the report with comments.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <div class="workflow-step-number">3</div>
+                    <div>
+                        <h4>Administrative consolidation</h4>
+                        <p class="page-text">
+                            Approved highlights are consolidated into a single department report.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="workflow-step mb-0">
+                    <div class="workflow-step-number">4</div>
+                    <div>
+                        <h4>Final dispatch</h4>
+                        <p class="page-text">
+                            The final consolidated report is shared with department management.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="content-card h-100">
+                <h2 class="quick-card-title">Portal objectives</h2>
+                <ul class="link-list mb-0">
+                    <li>Standardize weekly reporting</li>
+                    <li>Provide clear approval traceability</li>
+                    <li>Reduce email-based follow-up</li>
+                    <li>Allow consolidation from one place</li>
+                    <li>Prepare for future notifications and dashboards</li>
+                </ul>
+
+                <div class="action-row">
+                    <a class="btn-pill-primary" asp-controller="Home" asp-action="Applications">Related Applications</a>
+                    <a class="btn-pill-outline" asp-controller="Home" asp-action="News">Related News</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
