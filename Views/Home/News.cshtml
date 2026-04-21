@@ -2,68 +2,32 @@
     ViewData["Title"] = "News";
 }
 
-<section class="page-section">
-    <div class="content-card mb-4">
-        <div class="section-kicker">News</div>
-        <h1 class="card-title-main">News & announcements</h1>
-        <p class="page-text mb-0">
-            Stay informed about internal updates, department communications and important announcements.
+<section class="content-panel page-header-card">
+    <div class="section-eyebrow">News</div>
+    <h1>News &amp; Announcements</h1>
+    <p>
+        Department updates, PED notices and quick access to reference documents.
+    </p>
+</section>
+
+<section class="feature-grid two-col news-grid">
+    <article class="feature-card card-equal">
+        <h2>Azure Information Protection Guide</h2>
+        <p>
+            Quick access to the Azure Information Protection user guide in PDF format.
         </p>
-    </div>
-
-    <div class="row g-4 mb-4">
-        <div class="col-lg-8">
-            <div class="content-card h-100">
-                <div class="section-kicker">Featured Announcement</div>
-                <h2 class="quick-card-title">Department communication space</h2>
-                <p class="page-text">
-                    This page can be used to publish internal announcements, schedule updates,
-                    department notices, meeting reminders and management communications.
-                </p>
-                <p class="page-text mb-0">
-                    It can later be connected to a database-backed module so administrators can publish news dynamically.
-                </p>
-            </div>
+        <div class="action-row compact-actions">
+            <a class="btn-pill-primary" href="@Url.Content("~/docs/azure-information-protection-guide.pdf")" target="_blank" rel="noopener">Open Azure Guide</a>
         </div>
+    </article>
 
-        <div class="col-lg-4">
-            <div class="content-card h-100">
-                <h2 class="quick-card-title">Quick Links</h2>
-                <ul class="quick-links list-unstyled mb-0">
-                    <li><a asp-controller="Home" asp-action="WeeklyHighlights">Weekly Highlights</a></li>
-                    <li><a asp-controller="Home" asp-action="Documents">Reference Documents</a></li>
-                    <li><a asp-controller="Home" asp-action="EmployeeAccess">Contact & Support</a></li>
-                </ul>
-            </div>
+    <article class="feature-card card-equal">
+        <h2>Operational Calendar 2026</h2>
+        <p>
+            Open the operational calendar directly from the portal for quick consultation.
+        </p>
+        <div class="action-row compact-actions">
+            <a class="btn-pill-outline" href="@Url.Content("~/docs/operational-calendar-2026.pdf")" target="_blank" rel="noopener">Open Calendar PDF</a>
         </div>
-    </div>
-
-    <div class="row g-4">
-        <div class="col-md-6 col-xl-4">
-            <div class="info-card h-100">
-                <h3 class="info-card-title">Department Updates</h3>
-                <p class="info-card-text">
-                    Publish short updates about activities, initiatives and operational coordination topics.
-                </p>
-            </div>
-        </div>
-
-        <div class="col-md-6 col-xl-4">
-            <div class="info-card h-100">
-                <h3 class="info-card-title">Official Announcements</h3>
-                <p class="info-card-text">
-                    Use this area for official notices, instructions and important communications.
-                </p>
-            </div>
-        </div>
-
-        <div class="col-md-6 col-xl-4">
-            <div class="info-card h-100">
-                <h3 class="info-card-title">Upcoming Events</h3>
-                <p class="info-card-text">
-                    Highlight future meetings, deadlines, department reviews and planned internal events.
-                </p>
-            </div>
-        </div>
-    </div>
+    </article>
 </section>

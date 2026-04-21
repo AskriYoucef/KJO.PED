@@ -1,47 +1,233 @@
 @{
-    ViewData["Title"] = "Company Directory";
+    ViewData["Title"] = "Department Directory";
 }
 
 <section class="page-section">
-    <div class="content-card mb-4">
-        <div class="section-kicker">Directory</div>
-        <h1 class="card-title-main">Company directory</h1>
-        <p class="page-text mb-0">
-            A central place to find department contacts, team points of contact and useful internal references.
-        </p>
-    </div>
+    <div class="page-shell">
+        <div class="company-directory-page">
+            <section class="directory-legacy-intro">
+                <div class="directory-legacy-copy">
+                    <span class="directory-kicker">Department</span>
+                    <h1>Department Directory</h1>
+                    <p>
+                        Search PED contacts by name, position, division, extension or email.
+                        The page keeps the same clean style as the rest of the portal, with a lighter filter area and clearer results.
+                    </p>
+                </div>
+            </section>
 
-    <div class="row g-4 mb-4">
-        <div class="col-md-6 col-xl-4">
-            <div class="info-card h-100">
-                <h3 class="info-card-title">Department Management</h3>
-                <p class="info-card-text">
-                    Key contact information for management and department coordination.
-                </p>
-            </div>
+            <section class="directory-search-panel directory-panel">
+                <div class="directory-search-header">
+                    <h2>Find a contact</h2>
+                    <p>Use the search box and division filter below.</p>
+                </div>
+
+                <div class="directory-toolbar">
+                    <div class="directory-filter">
+                        <label for="directorySearch">Search</label>
+                        <input id="directorySearch"
+                               class="directory-control"
+                               type="search"
+                               placeholder="Search by name, position, email or extension" />
+                    </div>
+
+                    <div class="directory-filter">
+                        <label for="directorySection">Division</label>
+                        <select id="directorySection" class="directory-control">
+                            <option value="">All divisions</option>
+                            <option value="Data Management and Technology">Data Management and Technology</option>
+                            <option value="Reservoir Management">Reservoir Management</option>
+                            <option value="Geoseances">Geoseances</option>
+                            <option value="Integrated Moduling and Studies">Integrated Moduling and Studies</option>
+                            <option value="Planning and Business Support">Planning and Business Support</option>
+                        </select>
+                    </div>
+
+                    <div class="directory-reset-wrap">
+                        <button id="directoryReset" type="button" class="directory-reset">Clear filters</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="directory-results-panel directory-panel">
+                <div class="directory-results-head">
+                    <div>
+                        <h2>Directory results</h2>
+                        <p class="directory-results-subtitle">Updated presentation with smaller filters, division selector, and clearer row separators.</p>
+                    </div>
+                    <div class="directory-count-badge">
+                        <span id="directoryResultCount" class="directory-count">8</span>
+                        <span class="directory-count-label">contacts</span>
+                    </div>
+                </div>
+
+                <div class="directory-table-wrap">
+                    <table id="directoryTable" class="directory-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Division</th>
+                                <th>Extension</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="directory-row"
+                                data-section="Planning and Business Support"
+                                data-search="Fahad Al Mutairi Department Manager Planning and Business Support Khafji 4101 fahad.almutairi@kjo.com.sa">
+                                <td>
+                                    <div class="directory-name-cell">
+                                        <span class="directory-avatar">FA</span>
+                                        <div>
+                                            <strong>Fahad Al Mutairi</strong>
+                                            <span>Department lead</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Department Manager</td>
+                                <td>Planning and Business Support</td>
+                                <td>4101</td>
+                                <td><a href="mailto:fahad.almutairi@kjo.com.sa">fahad.almutairi@kjo.com.sa</a></td>
+                            </tr>
+
+                            <tr class="directory-row"
+                                data-section="Planning and Business Support"
+                                data-search="Noura Al Harbi Planning Coordination Lead Planning and Business Support Khafji 4108 noura.alharbi@kjo.com.sa">
+                                <td>
+                                    <div class="directory-name-cell">
+                                        <span class="directory-avatar">NH</span>
+                                        <div>
+                                            <strong>Noura Al Harbi</strong>
+                                            <span>Planning focal point</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Planning &amp; Coordination Lead</td>
+                                <td>Planning and Business Support</td>
+                                <td>4108</td>
+                                <td><a href="mailto:noura.alharbi@kjo.com.sa">noura.alharbi@kjo.com.sa</a></td>
+                            </tr>
+
+                            <tr class="directory-row"
+                                data-section="Reservoir Management"
+                                data-search="Ahmed Al Dosari Lead Reservoir Engineer Reservoir Management Khafji 4521 ahmed.aldosari@kjo.com.sa">
+                                <td>
+                                    <div class="directory-name-cell">
+                                        <span class="directory-avatar">AD</span>
+                                        <div>
+                                            <strong>Ahmed Al Dosari</strong>
+                                            <span>Reservoir team</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Lead Reservoir Engineer</td>
+                                <td>Reservoir Management</td>
+                                <td>4521</td>
+                                <td><a href="mailto:ahmed.aldosari@kjo.com.sa">ahmed.aldosari@kjo.com.sa</a></td>
+                            </tr>
+
+                            <tr class="directory-row"
+                                data-section="Integrated Moduling and Studies"
+                                data-search="Sara Al Rashid Production Engineer Integrated Moduling and Studies Khafji 4534 sara.alrashid@kjo.com.sa">
+                                <td>
+                                    <div class="directory-name-cell">
+                                        <span class="directory-avatar">SR</span>
+                                        <div>
+                                            <strong>Sara Al Rashid</strong>
+                                            <span>Production studies</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Production Engineer</td>
+                                <td>Integrated Moduling and Studies</td>
+                                <td>4534</td>
+                                <td><a href="mailto:sara.alrashid@kjo.com.sa">sara.alrashid@kjo.com.sa</a></td>
+                            </tr>
+
+                            <tr class="directory-row"
+                                data-section="Geoseances"
+                                data-search="Mohammed Al Qahtani Senior Geoscientist Geoseances Khobar 4586 mohammed.alqahtani@kjo.com.sa">
+                                <td>
+                                    <div class="directory-name-cell">
+                                        <span class="directory-avatar">MQ</span>
+                                        <div>
+                                            <strong>Mohammed Al Qahtani</strong>
+                                            <span>Geoscience support</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Senior Geoscientist</td>
+                                <td>Geoseances</td>
+                                <td>4586</td>
+                                <td><a href="mailto:mohammed.alqahtani@kjo.com.sa">mohammed.alqahtani@kjo.com.sa</a></td>
+                            </tr>
+
+                            <tr class="directory-row"
+                                data-section="Integrated Moduling and Studies"
+                                data-search="Layla Al Saif Petroleum Systems Engineer Integrated Moduling and Studies Khafji 4592 layla.alsaif@kjo.com.sa">
+                                <td>
+                                    <div class="directory-name-cell">
+                                        <span class="directory-avatar">LS</span>
+                                        <div>
+                                            <strong>Layla Al Saif</strong>
+                                            <span>Systems studies</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Petroleum Systems Engineer</td>
+                                <td>Integrated Moduling and Studies</td>
+                                <td>4592</td>
+                                <td><a href="mailto:layla.alsaif@kjo.com.sa">layla.alsaif@kjo.com.sa</a></td>
+                            </tr>
+
+                            <tr class="directory-row"
+                                data-section="Data Management and Technology"
+                                data-search="Yousef Al Shamri Data Management Specialist Data Management and Technology Khafji 4478 yousef.alshamri@kjo.com.sa">
+                                <td>
+                                    <div class="directory-name-cell">
+                                        <span class="directory-avatar">YS</span>
+                                        <div>
+                                            <strong>Yousef Al Shamri</strong>
+                                            <span>Data platform support</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Data Management Specialist</td>
+                                <td>Data Management and Technology</td>
+                                <td>4478</td>
+                                <td><a href="mailto:yousef.alshamri@kjo.com.sa">yousef.alshamri@kjo.com.sa</a></td>
+                            </tr>
+
+                            <tr class="directory-row"
+                                data-section="Data Management and Technology"
+                                data-search="Maha Al Otaibi Digital Solutions Analyst Data Management and Technology Khobar 4610 maha.alotaibi@kjo.com.sa">
+                                <td>
+                                    <div class="directory-name-cell">
+                                        <span class="directory-avatar">MO</span>
+                                        <div>
+                                            <strong>Maha Al Otaibi</strong>
+                                            <span>Digital solutions</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Digital Solutions Analyst</td>
+                                <td>Data Management and Technology</td>
+                                <td>4610</td>
+                                <td><a href="mailto:maha.alotaibi@kjo.com.sa">maha.alotaibi@kjo.com.sa</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="directoryEmptyState" class="directory-empty-state" style="display:none;">
+                    No contact matches the current search criteria.
+                </div>
+            </section>
         </div>
-
-        <div class="col-md-6 col-xl-4">
-            <div class="info-card h-100">
-                <h3 class="info-card-title">Technical Teams</h3>
-                <p class="info-card-text">
-                    Contact points for engineering, exploration, analysis and support activities.
-                </p>
-            </div>
-        </div>
-
-        <div class="col-md-6 col-xl-4">
-            <div class="info-card h-100">
-                <h3 class="info-card-title">Shared Services</h3>
-                <p class="info-card-text">
-                    Internal support contacts for administration, IT coordination and related services.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="info-note">
-        Recommended future step: connect this page to Active Directory or a database table
-        so the directory becomes searchable and automatically maintainable.
     </div>
 </section>
+
+@section Scripts {
+    <script src="~/js/company-directory.js" asp-append-version="true"></script>
+}

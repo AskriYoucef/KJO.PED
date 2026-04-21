@@ -34,11 +34,10 @@
                            asp-controller="Home" asp-action="Applications">
                         Applications
                     </a>
-                    <div class="dropdown-menu-custom applications-dropdown">
-                        <a asp-controller="Home" asp-action="Applications" asp-fragment="all-applications">All Applications</a>
-                        <div class="dropdown-divider-custom"></div>
-                        <a asp-controller="Home" asp-action="Applications" asp-fragment="ped-applications">PED Applications</a>
-                        <a asp-controller="Home" asp-action="Applications" asp-fragment="kjo-applications">KJO Applications</a>
+                    <div class="dropdown-menu-custom">
+                        <a asp-controller="Home" asp-action="Applications">PED Applications</a>
+                        <a asp-controller="Home" asp-action="Applications">KJO Useful Links</a>
+                        <a asp-controller="Home" asp-action="EmployeeAccess">Employee Services</a>
                     </div>
                 </div>
 
@@ -50,10 +49,8 @@
                     <div class="dropdown-menu-custom">
                         <a asp-controller="Home" asp-action="Documents">Policies &amp; Procedures</a>
                         <a asp-controller="Home" asp-action="Documents">Reference Documents</a>
-                        <a href="https://www.kjo.com.sa/irj/go/km/docs/documents/KJOWebSite/OPERATIONALCALANDER_EN_2026.pdf"
-                               target="_blank" rel="noopener">
-                            Operational Calendar 2026
-                        </a>
+                        <a href="@Url.Content("~/docs/operational-calendar-2026.pdf")" target="_blank" rel="noopener">Operational Calendar 2026</a>
+                        <a href="@Url.Content("~/docs/azure-information-protection-guide.pdf")" target="_blank" rel="noopener">Azure Information Protection Guide</a>
                     </div>
                 </div>
 
@@ -63,14 +60,14 @@
                         News
                     </a>
                     <div class="dropdown-menu-custom">
-                        <a asp-controller="Home" asp-action="News">Department News</a>
+                        <a asp-controller="Home" asp-action="News">News &amp; Announcements</a>
                         <a asp-controller="Home" asp-action="WeeklyHighlights">Weekly Highlights</a>
                     </div>
                 </div>
 
-                <a class="@(currentPage == "Company Directory" ? "active" : "")"
-                       asp-controller="CompanyDirectory" asp-action="Index">
-                    Company Directory
+                <a class="@((currentPage == "Department Directory" || currentPage == "Department Directory") ? "active" : "")"
+                       asp-controller="Home" asp-action="CompanyDirectory">
+                    Department Directory
                 </a>
 
                 <div class="nav-item has-dropdown">
@@ -99,9 +96,9 @@
 
     <footer class="site-footer">
         <div class="page-shell footer-inner">
-            <div class="footer-col footer-col-brand">
-                <div class="footer-brand-logo-wrap">
-                    <img src="~/images/logo_nobg1.png" alt="KJO Logo" class="footer-brand-logo" />
+            <div class="footer-col footer-brand-col">
+                <div class="footer-brand-panel">
+                    <img src="~/images/logo_nobg1.png" alt="KJO Logo" class="footer-brand-logo" asp-append-version="true" />
                 </div>
                 <h3>PED Portal</h3>
                 <p>Petroleum Engineering &amp; Exploration Department</p>
@@ -109,13 +106,13 @@
                 <div class="copyright">© 2026 PED Portal. All rights reserved.</div>
             </div>
 
-            <div class="footer-col footer-col-nav">
+            <div class="footer-col">
                 <h3>Navigation</h3>
                 <div class="footer-links-grid">
                     <a asp-controller="Home" asp-action="Index">Overview</a>
                     <a asp-controller="Home" asp-action="News">News</a>
                     <a asp-controller="Home" asp-action="Organization">Organization</a>
-                    <a asp-controller="CompanyDirectory" asp-action="Index">Company Directory</a>
+                    <a asp-controller="Home" asp-action="DepartmentDirectory">Department Directory</a>
                     <a asp-controller="Home" asp-action="Applications">Applications</a>
                     <a asp-controller="Home" asp-action="EmployeeAccess">Employee Access</a>
                     <a asp-controller="Home" asp-action="Documents">Documents</a>
@@ -123,7 +120,7 @@
                 </div>
             </div>
 
-            <div class="footer-col footer-col-access">
+            <div class="footer-col">
                 <h3>Useful Access</h3>
                 <p>
                     Find department references, contact points, weekly highlights

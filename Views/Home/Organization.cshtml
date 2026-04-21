@@ -2,45 +2,285 @@
     ViewData["Title"] = "Organization";
 }
 
-<section class="page-section">
-    <div class="content-card mb-4">
-        <div class="section-kicker">Organization</div>
-        <h1 class="card-title-main">Department structure and coordination</h1>
-        <p class="page-text mb-0">
-            This page presents the main functional structure of the Petroleum Engineering & Exploration Department.
-        </p>
-    </div>
+<section class="ped-org-v2">
+    <div class="page-shell ped-org-v2-shell">
 
-    <div class="row g-4">
-        <div class="col-md-6 col-xl-4">
-            <div class="info-card h-100">
-                <h3 class="info-card-title">Management</h3>
-                <p class="info-card-text">
-                    Department leadership, strategic coordination and overall oversight of PED activities.
-                </p>
-            </div>
+        <!-- HERO BANNER -->
+        <div class="ped-org-v2-hero">
+            <img src="~/images/header-banner.png" asp-append-version="true" alt="Petroleum Engineering & Exploration Department" />
         </div>
 
-        <div class="col-md-6 col-xl-4">
-            <div class="info-card h-100">
-                <h3 class="info-card-title">Engineering Functions</h3>
-                <p class="info-card-text">
-                    Reservoir, production, petroleum engineering and technical support related functions.
-                </p>
-            </div>
-        </div>
+        <!-- INTRO -->
+        <section class="ped-org-v2-panel ped-org-v2-intro">
+            <div class="ped-org-v2-intro-top">
+                <div>
+                    <span class="section-kicker">Organization</span>
+                    <h1 class="ped-org-v2-title">PED organization structure</h1>
+                    <p class="ped-org-v2-lead">
+                        Explore the Petroleum Engineering &amp; Exploration Department leadership model,
+                        its five core divisions, and the key responsibilities supporting PED operations.
+                    </p>
+                </div>
 
-        <div class="col-md-6 col-xl-4">
-            <div class="info-card h-100">
-                <h3 class="info-card-title">Exploration Functions</h3>
-                <p class="info-card-text">
-                    Exploration studies, subsurface interpretation and associated technical activities.
-                </p>
+                <a class="ped-org-v2-doc-link"
+                       href="~/images/Organization/PED Functional Statement.pdf"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                    Open PED functional statement
+                </a>
             </div>
-        </div>
-    </div>
 
-    <div class="info-note">
-        Later, this page can be upgraded with an organization chart image, reporting lines and role descriptions.
+            <nav class="ped-org-v2-tabs" aria-label="Organization sections">
+                <a href="#org-overview" class="ped-org-v2-tab">Overview</a>
+                <a href="#org-divisions" class="ped-org-v2-tab">Divisions</a>
+                <a href="#org-responsibilities" class="ped-org-v2-tab">Responsibilities</a>
+            </nav>
+        </section>
+
+        <!-- OVERVIEW -->
+        <section id="org-overview" class="ped-org-v2-panel">
+            <span class="section-kicker">Overview</span>
+            <h2 class="ped-org-v2-section-title">Department leadership and coordination</h2>
+
+            <div class="ped-org-v2-overview-grid">
+                <article class="ped-org-v2-info-card">
+                    <div class="ped-org-v2-info-badge">01</div>
+                    <h3>Department manager</h3>
+                    <p>
+                        PED is led by the Department Manager, who provides overall direction,
+                        technical alignment, coordination and strategic oversight across the department.
+                    </p>
+                </article>
+
+                <article class="ped-org-v2-info-card">
+                    <div class="ped-org-v2-info-badge">05</div>
+                    <h3>Five core divisions</h3>
+                    <p>
+                        The department structure includes Planning &amp; Business Support, Geoscience,
+                        Integrated Modelling &amp; Studies, Reservoir Management, and
+                        Data Management &amp; Technology.
+                    </p>
+                </article>
+
+                <article class="ped-org-v2-info-card">
+                    <div class="ped-org-v2-info-badge">PDF</div>
+                    <h3>Functional statement</h3>
+                    <p>
+                        The organization content is aligned with the PED functional statement and reflects
+                        the current internal presentation of the department.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- DIVISIONS / ORGANIGRAM -->
+        <section id="org-divisions" class="ped-org-v2-panel">
+            <span class="section-kicker">Divisions</span>
+            <h2 class="ped-org-v2-section-title">Modern department organigram</h2>
+            <p class="ped-org-v2-section-text">
+                The visual layout below presents the PED Manager at the top and the five core divisions underneath
+                in a cleaner and more elegant presentation.
+            </p>
+
+            <div class="ped-org-v2-chart">
+
+                <!-- MANAGER -->
+                <div class="ped-org-v2-manager-card">
+                    <span class="ped-org-v2-pill ped-org-v2-pill-manager">Department Manager</span>
+
+                    <div class="ped-org-v2-avatar ped-org-v2-avatar-manager">
+                        <img src="~/images/Organization/PED Manager.png"
+                             asp-append-version="true"
+                             alt="PED Manager"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                        <div class="ped-org-v2-avatar-fallback" style="display:none;">PM</div>
+                    </div>
+
+                    <h3>PED Manager</h3>
+                    <p class="ped-org-v2-role">Petroleum Engineering &amp; Exploration Department Manager</p>
+                    <p class="ped-org-v2-code">Position code: 48-000-001</p>
+
+                    <p class="ped-org-v2-summary">
+                        Leads PED strategy, aligns technical priorities, and oversees performance
+                        and coordination across all divisions.
+                    </p>
+                </div>
+
+                <!-- DIVISION GRID -->
+                <div class="ped-org-v2-divisions-grid">
+
+                    <!-- PBS -->
+                    <article class="ped-org-v2-division-card">
+                        <span class="ped-org-v2-pill ped-org-v2-pill-support">Support</span>
+
+                        <div class="ped-org-v2-avatar ped-org-v2-avatar-letter ped-org-v2-avatar-purple">
+                            <span>PBS</span>
+                        </div>
+
+                        <h3>Planning &amp; Business Support</h3>
+                        <p class="ped-org-v2-role">Section Supervisor</p>
+                        <p class="ped-org-v2-person">Fahad Ahmad Khalifah Alkhudhur</p>
+                        <p class="ped-org-v2-code">Position code: 48-010-001</p>
+
+                        <div class="ped-org-v2-key-box">
+                            <h4>Key responsibilities</h4>
+                            <ul>
+                                <li>Supports planning, reporting and business coordination activities.</li>
+                                <li>Tracks initiatives, KPI follow-up and departmental action items.</li>
+                                <li>Supports administrative and coordination workflows across PED.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- GEOSCIENCE -->
+                    <article class="ped-org-v2-division-card">
+                        <span class="ped-org-v2-pill ped-org-v2-pill-geo">Division 01</span>
+
+                        <div class="ped-org-v2-avatar">
+                            <img src="~/images/Organization/Geoseance.jpeg"
+                                 asp-append-version="true"
+                                 alt="Geoscience Division Superintendent"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                            <div class="ped-org-v2-avatar-fallback" style="display:none;">GS</div>
+                        </div>
+
+                        <h3>Geoscience</h3>
+                        <p class="ped-org-v2-role">Division Superintendent</p>
+                        <p class="ped-org-v2-person">Mutlaq Mohammad Alazmi</p>
+                        <p class="ped-org-v2-code">Position code: 48-100-001</p>
+
+                        <div class="ped-org-v2-key-box">
+                            <h4>Key responsibilities</h4>
+                            <ul>
+                                <li>Provides geological and geophysical support to PED activities.</li>
+                                <li>Supports subsurface interpretation, appraisal and exploration analysis.</li>
+                                <li>Contributes to well planning and geoscience studies.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- IMS -->
+                    <article class="ped-org-v2-division-card">
+                        <span class="ped-org-v2-pill ped-org-v2-pill-ims">Division 02</span>
+
+                        <div class="ped-org-v2-avatar">
+                            <img src="~/images/Organization/Integrated Modeling Studies.png"
+                                 asp-append-version="true"
+                                 alt="Integrated Modelling and Studies Division Superintendent"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                            <div class="ped-org-v2-avatar-fallback" style="display:none;">IMS</div>
+                        </div>
+
+                        <h3>Integrated Modelling &amp; Studies</h3>
+                        <p class="ped-org-v2-role">Division Superintendent</p>
+                        <p class="ped-org-v2-person">Falah Saud Alanazi</p>
+                        <p class="ped-org-v2-code">Position code: 48-200-001</p>
+
+                        <div class="ped-org-v2-key-box">
+                            <h4>Key responsibilities</h4>
+                            <ul>
+                                <li>Leads integrated technical studies and modelling activities.</li>
+                                <li>Supports development planning, well appraisal and evaluation studies.</li>
+                                <li>Maintains integrated subsurface and engineering study support.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- RESERVOIR -->
+                    <article class="ped-org-v2-division-card">
+                        <span class="ped-org-v2-pill ped-org-v2-pill-rm">Division 03</span>
+
+                        <div class="ped-org-v2-avatar">
+                            <img src="~/images/Organization/Reservior Management.png"
+                                 asp-append-version="true"
+                                 alt="Reservoir Management Division Superintendent"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                            <div class="ped-org-v2-avatar-fallback" style="display:none;">RM</div>
+                        </div>
+
+                        <h3>Reservoir Management</h3>
+                        <p class="ped-org-v2-role">Division Superintendent</p>
+                        <p class="ped-org-v2-person">Bader Habib Abass</p>
+                        <p class="ped-org-v2-code">Position code: 48-300-001</p>
+
+                        <div class="ped-org-v2-key-box">
+                            <h4>Key responsibilities</h4>
+                            <ul>
+                                <li>Supports reservoir surveillance and performance management.</li>
+                                <li>Contributes to depletion strategy and optimization studies.</li>
+                                <li>Supports reservoir data follow-up and field development decisions.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- DMT -->
+                    <article class="ped-org-v2-division-card">
+                        <span class="ped-org-v2-pill ped-org-v2-pill-dmt">Division 04</span>
+
+                        <div class="ped-org-v2-avatar">
+                            <img src="~/images/Organization/Data Management Technology.png"
+                                 asp-append-version="true"
+                                 alt="Data Management and Technology Division Superintendent"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                            <div class="ped-org-v2-avatar-fallback" style="display:none;">DMT</div>
+                        </div>
+
+                        <h3>Data Management &amp; Technology</h3>
+                        <p class="ped-org-v2-role">Division Superintendent</p>
+                        <p class="ped-org-v2-person">Salman Hammad Alotaibi</p>
+                        <p class="ped-org-v2-code">Position code: 48-400-001</p>
+
+                        <div class="ped-org-v2-key-box">
+                            <h4>Key responsibilities</h4>
+                            <ul>
+                                <li>Leads PED data systems, applications and digital enablement.</li>
+                                <li>Supports information quality, integration and technical platforms.</li>
+                                <li>Manages data workflows and technology support across PED.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- RESPONSIBILITIES -->
+        <section id="org-responsibilities" class="ped-org-v2-panel">
+            <span class="section-kicker">Responsibilities</span>
+            <h2 class="ped-org-v2-section-title">Key responsibilities at a glance</h2>
+
+            <div class="ped-org-v2-responsibility-grid">
+                <article class="ped-org-v2-resp-card">
+                    <span class="ped-org-v2-pill ped-org-v2-pill-support">Planning</span>
+                    <h3>Planning &amp; Business Support</h3>
+                    <p>Planning, reporting, coordination, business support and departmental follow-up.</p>
+                </article>
+
+                <article class="ped-org-v2-resp-card">
+                    <span class="ped-org-v2-pill ped-org-v2-pill-geo">Subsurface</span>
+                    <h3>Geoscience</h3>
+                    <p>Geology, geophysics, exploration support and subsurface technical studies.</p>
+                </article>
+
+                <article class="ped-org-v2-resp-card">
+                    <span class="ped-org-v2-pill ped-org-v2-pill-ims">Studies</span>
+                    <h3>Integrated Modelling &amp; Studies</h3>
+                    <p>Integrated modelling, reservoir studies and multidisciplinary technical evaluation.</p>
+                </article>
+
+                <article class="ped-org-v2-resp-card">
+                    <span class="ped-org-v2-pill ped-org-v2-pill-rm">Reservoir</span>
+                    <h3>Reservoir Management</h3>
+                    <p>Reservoir surveillance, depletion planning, optimization and performance management.</p>
+                </article>
+
+                <article class="ped-org-v2-resp-card">
+                    <span class="ped-org-v2-pill ped-org-v2-pill-dmt">Technology</span>
+                    <h3>Data Management &amp; Technology</h3>
+                    <p>Data systems, digital support, integration, technical tools and information enablement.</p>
+                </article>
+            </div>
+        </section>
+
     </div>
 </section>

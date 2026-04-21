@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const searchValue = normalize(searchInput.value);
         const sectionValue = normalize(sectionSelect.value);
         let visibleCount = 0;
+        let firstVisibleRow = null;
 
         rows.forEach(function (row) {
             const rowSearch = normalize(row.getAttribute("data-search"));
@@ -29,11 +30,22 @@ document.addEventListener("DOMContentLoaded", function () {
             const isVisible = matchesSearch && matchesSection;
 
             row.style.display = isVisible ? "" : "none";
+            row.classList.remove("is-active", "is-odd-visible", "is-even-visible");
 
             if (isVisible) {
                 visibleCount += 1;
+
+                if (!firstVisibleRow) {
+                    firstVisibleRow = row;
+                }
+
+                row.classList.add(visibleCount % 2 === 1 ? "is-odd-visible" : "is-even-visible");
             }
         });
+
+        if (firstVisibleRow) {
+            firstVisibleRow.classList.add("is-active");
+        }
 
         resultCount.textContent = visibleCount.toString();
         emptyState.style.display = visibleCount === 0 ? "block" : "none";
