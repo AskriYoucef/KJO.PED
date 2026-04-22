@@ -1,0 +1,30 @@
+cd /c/Users/dzausr1725/source/repos/KJO.PED
+
+
+git status
+git push --force-with-lease origin main
+git fetch origin
+git log --oneline --graph --decorate --all -n 10
+git push --force-with-lease origin main
+
+
+
+
+Si tu veux être prudent avant de tout écraser, fais d’abord une sauvegarde locale :
+
+git stash push -u -m "backup avant restauration"
+
+Puis restaure :
+
+git fetch origin
+git reset --hard origin/main
+git clean -fd
+
+
+***********************************************************************
+cd /c/Users/dzausr1725/source/repos/KJO.PED
+git status
+git add Views/Home/Organization.cshtml wwwroot/css/site.css wwwroot/images/Organization/ wwwroot/images/ped-seal.png
+git add -u
+git commit -m "Enhance PED organization page"
+git push origin main
