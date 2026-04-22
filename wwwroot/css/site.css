@@ -64,7 +64,7 @@ a {
     .top-nav .nav-link {
         color: #0f2d63;
         font-weight: 700;
-        font-size: 0.95rem;
+        font-size: 1.04rem;
         padding: 10px 12px;
         border-radius: 12px;
         white-space: nowrap;
@@ -72,6 +72,18 @@ a {
         display: inline-flex;
         align-items: center;
     }
+
+        .top-nav > a:not(:last-child)::after,
+        .top-nav .nav-item:not(:last-child) .nav-link::after {
+            content: "";
+            position: absolute;
+            right: -4px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 18px;
+            background: rgba(15, 45, 99, 0.16);
+        }
 
         .top-nav > a:hover,
         .top-nav .nav-link:hover,

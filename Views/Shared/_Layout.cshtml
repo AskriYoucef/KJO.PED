@@ -35,8 +35,7 @@
                         Applications
                     </a>
                     <div class="dropdown-menu-custom">
-                        <a asp-controller="Home" asp-action="Applications">PED Applications</a>
-                        <a asp-controller="Home" asp-action="Applications">KJO Useful Links</a>
+                        <a asp-controller="Home" asp-action="Applications">Internal Applications</a>
                         <a asp-controller="Home" asp-action="EmployeeAccess">Employee Services</a>
                     </div>
                 </div>
@@ -49,8 +48,10 @@
                     <div class="dropdown-menu-custom">
                         <a asp-controller="Home" asp-action="Documents">Policies &amp; Procedures</a>
                         <a asp-controller="Home" asp-action="Documents">Reference Documents</a>
-                        <a href="@Url.Content("~/docs/operational-calendar-2026.pdf")" target="_blank" rel="noopener">Operational Calendar 2026</a>
-                        <a href="@Url.Content("~/docs/azure-information-protection-guide.pdf")" target="_blank" rel="noopener">Azure Information Protection Guide</a>
+                        <a href="https://www.kjo.com.sa/irj/go/km/docs/documents/KJOWebSite/OPERATIONALCALANDER_EN_2026.pdf"
+                               target="_blank" rel="noopener">
+                            Operational Calendar 2026
+                        </a>
                     </div>
                 </div>
 
@@ -60,14 +61,14 @@
                         News
                     </a>
                     <div class="dropdown-menu-custom">
-                        <a asp-controller="Home" asp-action="News">News &amp; Announcements</a>
+                        <a asp-controller="Home" asp-action="News">Department News</a>
                         <a asp-controller="Home" asp-action="WeeklyHighlights">Weekly Highlights</a>
                     </div>
                 </div>
 
-                <a class="@((currentPage == "Department Directory" || currentPage == "Department Directory") ? "active" : "")"
+                <a class="@(currentPage == "Company Directory" ? "active" : "")"
                        asp-controller="Home" asp-action="CompanyDirectory">
-                    Department Directory
+                    Company Directory
                 </a>
 
                 <div class="nav-item has-dropdown">
@@ -89,16 +90,19 @@
 
     <main class="site-main">
         <div class="page-shell">
-            @await Html.PartialAsync("_PedBanner")
+            @if (currentPage != "Organization")
+            {
+                @await Html.PartialAsync("_PedBanner")
+            }
             @RenderBody()
         </div>
     </main>
 
     <footer class="site-footer">
         <div class="page-shell footer-inner">
-            <div class="footer-col footer-brand-col">
-                <div class="footer-brand-panel">
-                    <img src="~/images/logo_nobg1.png" alt="KJO Logo" class="footer-brand-logo" asp-append-version="true" />
+            <div class="footer-col">
+                <div class="footer-brand-logo-wrap">
+                    <img src="~/images/logo_nobg1.png" alt="KJO Logo" class="footer-brand-logo" />
                 </div>
                 <h3>PED Portal</h3>
                 <p>Petroleum Engineering &amp; Exploration Department</p>
@@ -112,7 +116,7 @@
                     <a asp-controller="Home" asp-action="Index">Overview</a>
                     <a asp-controller="Home" asp-action="News">News</a>
                     <a asp-controller="Home" asp-action="Organization">Organization</a>
-                    <a asp-controller="Home" asp-action="DepartmentDirectory">Department Directory</a>
+                    <a asp-controller="Home" asp-action="CompanyDirectory">Company Directory</a>
                     <a asp-controller="Home" asp-action="Applications">Applications</a>
                     <a asp-controller="Home" asp-action="EmployeeAccess">Employee Access</a>
                     <a asp-controller="Home" asp-action="Documents">Documents</a>
@@ -136,7 +140,6 @@
     </footer>
 
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

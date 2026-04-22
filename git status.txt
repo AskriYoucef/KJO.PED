@@ -28,3 +28,10 @@ git add Views/Home/Organization.cshtml wwwroot/css/site.css wwwroot/images/Organ
 git add -u
 git commit -m "Enhance PED organization page"
 git push origin main
+
+***********************************************************************************************************************
+Pour sauver exactement le projet tel qu’il est maintenant sur disque, fais simplement :
+git add -A
+git status
+git commit -m "Save current project state"
+git push origin main
