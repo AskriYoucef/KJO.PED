@@ -90,10 +90,7 @@
 
     <main class="site-main">
         <div class="page-shell">
-            @if (currentPage != "Organization")
-            {
-                @await Html.PartialAsync("_PedBanner")
-            }
+            @await Html.PartialAsync("_PedBanner")
             @RenderBody()
         </div>
     </main>

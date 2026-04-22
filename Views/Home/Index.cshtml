@@ -2,111 +2,128 @@
     ViewData["Title"] = "Overview";
 }
 
-<section class="page-section">
-    <div class="row g-4 mb-4">
-        <div class="col-lg-8">
-            <div class="content-card h-100">
-                <div class="section-kicker">Overview</div>
-                <h1 class="card-title-main">A central entry point for PED teams</h1>
+<section class="page-section overview-page-section">
+    <!-- Manager message -->
+    <div class="content-card manager-message-card mb-4">
+        <div class="section-kicker">Manager’s Message</div>
+        <h1 class="card-title-main overview-manager-title">Petroleum Engineering &amp; Exploration Department</h1>
+        <p class="manager-message-subtitle mb-2">
+            A message from the Manager of the Petroleum Engineering &amp; Exploration Department
+        </p>
 
-                <p class="page-text">
-                    The PED Portal brings together the most important department resources in one place:
-                    internal applications, reference documents, procedures, announcements and employee services.
+        <div class="manager-message-body">
+            <p><strong>Welcome to the Petroleum Engineering &amp; Exploration Department.</strong></p>
+
+            <p>
+                Our department plays a central role in delivering integrated upstream value—spanning exploration,
+                appraisal, reservoir engineering, drilling support, and production optimization. Through a combination
+                of technical expertise, advanced technologies, and data-driven insights, we work to maximize hydrocarbon
+                recovery, enhance asset performance, and support sustainable field development.
+            </p>
+
+            <p>
+                We are committed to excellence in everything we do. From defining exploration strategies and evaluating
+                subsurface opportunities, to developing reservoir models and optimizing production, our focus remains on
+                achieving operational efficiency, maintaining high technical standards, and delivering long-term value to the organization.
+            </p>
+
+            <details class="manager-message-more">
+                <summary>Read full message</summary>
+
+                <p>
+                    Innovation and continuous improvement are key pillars of our approach. We actively adopt and implement
+                    new technologies, strengthen our data management capabilities, and enhance our systems to support
+                    informed decision-making and operational agility.
                 </p>
 
-                <p class="page-text mb-0">
-                    Its purpose is to simplify access to information, improve internal coordination,
-                    and provide a clear digital workspace for employees, supervisors and department management.
+                <p>
+                    Equally important is our investment in people. We strive to create a collaborative environment that
+                    encourages knowledge sharing, professional growth, and strong teamwork across disciplines and with our partners.
+                    Our structured processes, performance management systems, and clear objectives ensure alignment and accountability at all levels.
                 </p>
 
-                <div class="action-row">
-                    <a class="btn-pill-primary" asp-controller="Home" asp-action="Applications">Open Applications</a>
-                    <a class="btn-pill-outline" asp-controller="Home" asp-action="Documents">Browse Documents</a>
-                    <a class="btn-pill-outline" asp-controller="Home" asp-action="WeeklyHighlights">Weekly Highlights</a>
-                </div>
+                <p>
+                    As you explore our department, you will discover a dynamic and integrated team dedicated to excellence,
+                    safety, and continuous advancement. We are proud of the role we play in the organization’s success and remain
+                    committed to shaping a sustainable future for KJO.
+                </p>
+
+                <p class="manager-signature mb-0">
+                    <strong>Salman H. Al-Thaqafi</strong><br />
+                    Manager, Petroleum Engineering &amp; Exploration Department
+                </p>
+            </details>
+        </div>
+    </div>
+
+    <!-- No-gap cards grid -->
+    <div class="overview-card-grid mb-4">
+        <div class="info-card overview-quick-card">
+            <h2 class="info-card-title">Quick Access</h2>
+            <ul class="quick-links list-unstyled mb-0">
+                <li><a asp-controller="Home" asp-action="Documents">Policies &amp; Procedures</a></li>
+                <li><a asp-controller="Home" asp-action="Documents">Reference Documents</a></li>
+                <li><a asp-controller="CompanyDirectory" asp-action="Index">Company Directory</a></li>
+                <li><a asp-controller="Home" asp-action="EmployeeAccess">Employee Access</a></li>
+                <li><a asp-controller="Home" asp-action="WeeklyHighlights">Weekly Highlights</a></li>
+            </ul>
+        </div>
+
+        <div class="info-card overview-feature-card">
+            <h3 class="info-card-title">Applications</h3>
+            <p class="info-card-text">
+                Access internal tools, business platforms and department-specific services used by PED teams.
+            </p>
+            <div class="action-row">
+                <a class="btn-pill-outline" asp-controller="Home" asp-action="Applications">Open Applications</a>
             </div>
         </div>
 
-        <div class="col-lg-4">
-            <div class="content-card h-100">
-                <h2 class="quick-card-title">Quick Access</h2>
-                <ul class="quick-links list-unstyled mb-0">
-                    <li><a asp-controller="Home" asp-action="Documents">Policies & Procedures</a></li>
-                    <li><a asp-controller="Home" asp-action="Documents">Reference Documents</a></li>
-                    <li><a asp-controller="CompanyDirectory" asp-action="Index">Company Directory</a></li>
-                    <li><a asp-controller="Home" asp-action="EmployeeAccess">Employee Access</a></li>
-                    <li><a asp-controller="Home" asp-action="WeeklyHighlights">Weekly Highlights</a></li>
-                </ul>
+        <div class="info-card overview-feature-card">
+            <h3 class="info-card-title">Documents &amp; Procedures</h3>
+            <p class="info-card-text">
+                Find policies, procedures, templates, forms and technical reference documents in one place.
+            </p>
+            <div class="action-row">
+                <a class="btn-pill-outline" asp-controller="Home" asp-action="Documents">Open Documents</a>
+            </div>
+        </div>
+
+        <div class="info-card overview-feature-card">
+            <h3 class="info-card-title">News &amp; Announcements</h3>
+            <p class="info-card-text">
+                Stay informed about department updates, official announcements and important internal news.
+            </p>
+            <div class="action-row">
+                <a class="btn-pill-outline" asp-controller="Home" asp-action="News">Open News</a>
             </div>
         </div>
     </div>
 
-    <div class="row g-4 mb-4">
-        <div class="col-md-6 col-xl-4">
-            <div class="info-card">
-                <h3 class="info-card-title">Applications</h3>
-                <p class="info-card-text">
-                    Access internal tools, business platforms and department-specific services used by PED teams.
-                </p>
-                <div class="action-row">
-                    <a class="btn-pill-outline" asp-controller="Home" asp-action="Applications">Open Applications</a>
-                </div>
+    <div class="overview-highlight-grid">
+        <div class="highlight-card">
+            <h3>Weekly Highlights Workflow</h3>
+            <p>
+                The portal can later centralize weekly report submission, supervisor review,
+                consolidation and final management dispatch.
+            </p>
+            <div class="action-row">
+                <a class="btn-pill-primary" asp-controller="Home" asp-action="WeeklyHighlights">Open Weekly Highlights</a>
             </div>
         </div>
 
-        <div class="col-md-6 col-xl-4">
-            <div class="info-card">
-                <h3 class="info-card-title">Documents & Procedures</h3>
-                <p class="info-card-text">
-                    Find policies, procedures, templates, forms and technical reference documents in one place.
-                </p>
-                <div class="action-row">
-                    <a class="btn-pill-outline" asp-controller="Home" asp-action="Documents">Open Documents</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6 col-xl-4">
-            <div class="info-card">
-                <h3 class="info-card-title">News & Announcements</h3>
-                <p class="info-card-text">
-                    Stay informed about department updates, official announcements and important internal news.
-                </p>
-                <div class="action-row">
-                    <a class="btn-pill-outline" asp-controller="Home" asp-action="News">Open News</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row g-4">
-        <div class="col-lg-6">
-            <div class="highlight-card">
-                <h3>Weekly Highlights Workflow</h3>
-                <p>
-                    The portal can later centralize weekly report submission, supervisor review,
-                    consolidation and final management dispatch.
-                </p>
-                <div class="action-row">
-                    <a class="btn-pill-primary" asp-controller="Home" asp-action="WeeklyHighlights">Open Weekly Highlights</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-6">
-            <div class="highlight-card">
-                <h3>Operational Calendar 2026</h3>
-                <p>
-                    The 2026 operational calendar can be opened directly from the portal for quick consultation.
-                </p>
-                <div class="action-row">
-                    <a class="btn-pill-primary"
-                           href="https://www.kjo.com.sa/irj/go/km/docs/documents/KJOWebSite/OPERATIONALCALANDER_EN_2026.pdf"
-                           target="_blank" rel="noopener">
-                        Open Calendar PDF
-                    </a>
-                    <a class="btn-pill-outline" asp-controller="Home" asp-action="Documents">More Documents</a>
-                </div>
+        <div class="highlight-card">
+            <h3>Operational Calendar 2026</h3>
+            <p>
+                The 2026 operational calendar can be opened directly from the portal for quick consultation.
+            </p>
+            <div class="action-row">
+                <a class="btn-pill-primary"
+                       href="https://www.kjo.com.sa/irj/go/km/docs/documents/KJOWebSite/OPERATIONALCALANDER_EN_2026.pdf"
+                       target="_blank" rel="noopener">
+                    Open Calendar PDF
+                </a>
+                <a class="btn-pill-outline" asp-controller="Home" asp-action="Documents">More Documents</a>
             </div>
         </div>
     </div>

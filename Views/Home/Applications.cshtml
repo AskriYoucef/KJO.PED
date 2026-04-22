@@ -2,17 +2,15 @@
     ViewData["Title"] = "Applications";
 }
 
-<section class="apps-page-section" id="all-applications">
+<section class="apps-page-section apps-bubbles-page" id="all-applications">
     <div class="container ped-apps-container">
         <div class="apps-page-header">
             <span class="section-kicker">Applications</span>
-            <h1>PED Applications & KJO Useful Links</h1>
-            <p>
-                Access PED operational applications and useful KJO platforms from one centralized page.
-            </p>
+            <h1>PED Applications &amp; KJO Useful Links</h1>
+            <p>Access PED operational applications and useful KJO platforms from one centralized page.</p>
         </div>
 
-        <div class="apps-group-block" id="ped-applications">
+        <div class="apps-group-block apps-bubbles-block" id="ped-applications">
             <div class="apps-group-header">
                 <div>
                     <span class="apps-group-kicker">PED</span>
@@ -21,136 +19,108 @@
                 </div>
             </div>
 
-            <div class="apps-grid">
-                <a class="app-tile ped-card" href="https://eddapp71.kjo.com.sa:8080/" target="_blank" rel="noopener noreferrer">
-                    <div class="app-tile-top">
-                        <span class="app-tile-badge ped-badge">PED</span>
-                        <span class="app-tile-arrow">↗</span>
-                    </div>
-                    <div class="app-tile-logo"><span>PS</span></div>
-                    <h3>ProSource Web</h3>
-                    <p>Access PED engineering resources and web-based tools.</p>
-                    <div class="app-tile-meta">
-                        <span class="app-chip">Engineering</span>
-                        <span class="app-chip">Web tool</span>
-                    </div>
-                    <div class="app-tile-footer">
-                        <span class="app-chip">PED core</span>
-                        <span class="app-open-link">Open</span>
+            <div class="apps-bubble-grid">
+                <a class="app-bubble ped-bubble" href="https://eddapp71.kjo.com.sa:8080/" target="_blank" rel="noopener noreferrer" style="--bubble-logo: url('/images/logo/logo.png');">
+                    <span class="app-bubble-badge">PED</span>
+                    <div class="app-bubble-core">
+                        <div class="app-bubble-icon">PS</div>
+                        <h3>ProSource Web</h3>
+                        <p class="app-bubble-mini">Engineering resources</p>
+                        <div class="app-bubble-overlay">
+                            <strong>ProSource Web</strong>
+                            <span>Access PED engineering resources and web-based tools.</span>
+                            <em>Open</em>
+                        </div>
                     </div>
                 </a>
 
-                <a class="app-tile ped-card" href="https://sanad.kjo.com.sa/ords/f?p=SANAD:LOGIN_DESKTOP::::::" target="_blank" rel="noopener noreferrer">
-                    <div class="app-tile-top">
-                        <span class="app-tile-badge ped-badge">PED</span>
-                        <span class="app-tile-arrow">↗</span>
-                    </div>
-                    <div class="app-tile-logo"><span>SA</span></div>
-                    <h3>Sanad</h3>
-                    <p>Main Sanad portal for PED operational workflows.</p>
-                    <div class="app-tile-meta">
-                        <span class="app-chip">Workflow</span>
-                        <span class="app-chip">Operations</span>
-                    </div>
-                    <div class="app-tile-footer">
-                        <span class="app-chip">PED core</span>
-                        <span class="app-open-link">Open</span>
+                <a class="app-bubble ped-bubble" href="https://sanad.kjo.com.sa/ords/f?p=SANAD:LOGIN_DESKTOP::::::" target="_blank" rel="noopener noreferrer" style="--bubble-logo: url('/images/logo/logo.png');">
+                    <span class="app-bubble-badge">PED</span>
+                    <div class="app-bubble-core">
+                        <div class="app-bubble-icon">SA</div>
+                        <h3>Sanad</h3>
+                        <p class="app-bubble-mini">Operational workflows</p>
+                        <div class="app-bubble-overlay">
+                            <strong>Sanad</strong>
+                            <span>Main Sanad portal for PED operational workflows.</span>
+                            <em>Open</em>
+                        </div>
                     </div>
                 </a>
 
-                <a class="app-tile ped-card" href="https://sanad.kjo.com.sa/ords/f?p=SANAD:ACTIVE_WAP" target="_blank" rel="noopener noreferrer">
-                    <div class="app-tile-top">
-                        <span class="app-tile-badge ped-badge">PED</span>
-                        <span class="app-tile-arrow">↗</span>
-                    </div>
-                    <div class="app-tile-logo"><span>WA</span></div>
-                    <h3>WAP</h3>
-                    <p>Active WAP access through the Sanad platform.</p>
-                    <div class="app-tile-meta">
-                        <span class="app-chip">Active WAP</span>
-                        <span class="app-chip">Operations</span>
-                    </div>
-                    <div class="app-tile-footer">
-                        <span class="app-chip">PED core</span>
-                        <span class="app-open-link">Open</span>
+                <a class="app-bubble ped-bubble" href="https://sanad.kjo.com.sa/ords/f?p=SANAD:ACTIVE_WAP" target="_blank" rel="noopener noreferrer" style="--bubble-logo: url('/images/logo/logo.png');">
+                    <span class="app-bubble-badge">PED</span>
+                    <div class="app-bubble-core">
+                        <div class="app-bubble-icon">WA</div>
+                        <h3>WAP</h3>
+                        <p class="app-bubble-mini">Well access platform</p>
+                        <div class="app-bubble-overlay">
+                            <strong>WAP</strong>
+                            <span>Active WAP access through the Sanad platform.</span>
+                            <em>Open</em>
+                        </div>
                     </div>
                 </a>
 
-                <a class="app-tile ped-card" href="https://sanad.kjo.com.sa/ords/f?p=SANAD:ACTIVE_WOCP" target="_blank" rel="noopener noreferrer">
-                    <div class="app-tile-top">
-                        <span class="app-tile-badge ped-badge">PED</span>
-                        <span class="app-tile-arrow">↗</span>
-                    </div>
-                    <div class="app-tile-logo"><span>WO</span></div>
-                    <h3>WOCP</h3>
-                    <p>Work order and operational control portal.</p>
-                    <div class="app-tile-meta">
-                        <span class="app-chip">Work orders</span>
-                        <span class="app-chip">Control</span>
-                    </div>
-                    <div class="app-tile-footer">
-                        <span class="app-chip">PED core</span>
-                        <span class="app-open-link">Open</span>
+                <a class="app-bubble ped-bubble" href="https://sanad.kjo.com.sa/ords/f?p=SANAD:ACTIVE_WOCP" target="_blank" rel="noopener noreferrer" style="--bubble-logo: url('/images/logo/logo.png');">
+                    <span class="app-bubble-badge">PED</span>
+                    <div class="app-bubble-core">
+                        <div class="app-bubble-icon">WO</div>
+                        <h3>WOCP</h3>
+                        <p class="app-bubble-mini">Work order control</p>
+                        <div class="app-bubble-overlay">
+                            <strong>WOCP</strong>
+                            <span>Work order and operational control portal.</span>
+                            <em>Open</em>
+                        </div>
                     </div>
                 </a>
 
-                <a class="app-tile ped-card" href="http://10.9.41.179:8080/HomePage.do" target="_blank" rel="noopener noreferrer">
-                    <div class="app-tile-top">
-                        <span class="app-tile-badge ped-badge">PED</span>
-                        <span class="app-tile-arrow">↗</span>
-                    </div>
-                    <div class="app-tile-logo"><span>SD</span></div>
-                    <h3>EDD Support Desk</h3>
-                    <p>Support desk portal for incidents, requests and issue tracking.</p>
-                    <div class="app-tile-meta">
-                        <span class="app-chip">Support</span>
-                        <span class="app-chip">Tickets</span>
-                    </div>
-                    <div class="app-tile-footer">
-                        <span class="app-chip">PED support</span>
-                        <span class="app-open-link">Open</span>
+                <a class="app-bubble ped-bubble" href="http://10.9.41.179:8080/HomePage.do" target="_blank" rel="noopener noreferrer" style="--bubble-logo: url('/images/logo/logo.png');">
+                    <span class="app-bubble-badge">PED</span>
+                    <div class="app-bubble-core">
+                        <div class="app-bubble-icon">SD</div>
+                        <h3>EDD Support Desk</h3>
+                        <p class="app-bubble-mini">Incident support</p>
+                        <div class="app-bubble-overlay">
+                            <strong>EDD Support Desk</strong>
+                            <span>Support desk portal for incidents, requests and issue tracking.</span>
+                            <em>Open</em>
+                        </div>
                     </div>
                 </a>
 
-                <a class="app-tile ped-card" href="http://eddweb03.kjo.com.sa/portal/home/index.html" target="_blank" rel="noopener noreferrer">
-                    <div class="app-tile-top">
-                        <span class="app-tile-badge ped-badge">PED</span>
-                        <span class="app-tile-arrow">↗</span>
-                    </div>
-                    <div class="app-tile-logo"><span>GI</span></div>
-                    <h3>GIS Portal</h3>
-                    <p>Geographic and spatial information portal for engineering access.</p>
-                    <div class="app-tile-meta">
-                        <span class="app-chip">GIS</span>
-                        <span class="app-chip">Spatial</span>
-                    </div>
-                    <div class="app-tile-footer">
-                        <span class="app-chip">Engineering</span>
-                        <span class="app-open-link">Open</span>
+                <a class="app-bubble ped-bubble" href="http://eddweb03.kjo.com.sa/portal/home/index.html" target="_blank" rel="noopener noreferrer" style="--bubble-logo: url('/images/logo/logo.png');">
+                    <span class="app-bubble-badge">PED</span>
+                    <div class="app-bubble-core">
+                        <div class="app-bubble-icon">GI</div>
+                        <h3>GIS Portal</h3>
+                        <p class="app-bubble-mini">Spatial information</p>
+                        <div class="app-bubble-overlay">
+                            <strong>GIS Portal</strong>
+                            <span>Geographic and spatial information portal for engineering access.</span>
+                            <em>Open</em>
+                        </div>
                     </div>
                 </a>
 
-                <a class="app-tile ped-card" href="https://eddvca01.kjo.com.sa/ui/" target="_blank" rel="noopener noreferrer">
-                    <div class="app-tile-top">
-                        <span class="app-tile-badge ped-badge">PED</span>
-                        <span class="app-tile-arrow">↗</span>
-                    </div>
-                    <div class="app-tile-logo"><span>VS</span></div>
-                    <h3>vSphere Client</h3>
-                    <p>vSphere access for E&amp;P Systems Engineers.</p>
-                    <div class="app-tile-meta">
-                        <span class="app-chip">Systems</span>
-                        <span class="app-chip">Infrastructure</span>
-                    </div>
-                    <div class="app-tile-footer">
-                        <span class="app-chip">Engineering</span>
-                        <span class="app-open-link">Open</span>
+                <a class="app-bubble ped-bubble" href="https://eddvca01.kjo.com.sa/ui/" target="_blank" rel="noopener noreferrer" style="--bubble-logo: url('/images/logo/logo.png');">
+                    <span class="app-bubble-badge">PED</span>
+                    <div class="app-bubble-core">
+                        <div class="app-bubble-icon">VS</div>
+                        <h3>vSphere Client</h3>
+                        <p class="app-bubble-mini">Virtual infrastructure</p>
+                        <div class="app-bubble-overlay">
+                            <strong>vSphere Client</strong>
+                            <span>vSphere access for E&amp;P Systems Engineers.</span>
+                            <em>Open</em>
+                        </div>
                     </div>
                 </a>
             </div>
         </div>
 
-        <div class="apps-group-block kjo-block" id="kjo-applications">
+        <div class="apps-group-block apps-bubbles-block kjo-block" id="kjo-applications">
             <div class="apps-group-header">
                 <div>
                     <span class="apps-group-kicker kjo-kicker">KJO</span>
@@ -159,130 +129,102 @@
                 </div>
             </div>
 
-            <div class="apps-grid">
-                <a class="app-tile kjo-card" href="https://www.kjo.com.sa/irj/portal/anonymous" target="_blank" rel="noopener noreferrer">
-                    <div class="app-tile-top">
-                        <span class="app-tile-badge kjo-badge">KJO</span>
-                        <span class="app-tile-arrow">↗</span>
-                    </div>
-                    <div class="app-tile-logo"><span>KW</span></div>
-                    <h3>KJO Website</h3>
-                    <p>Official KJO public website.</p>
-                    <div class="app-tile-meta">
-                        <span class="app-chip">Corporate</span>
-                        <span class="app-chip">Public</span>
-                    </div>
-                    <div class="app-tile-footer">
-                        <span class="app-chip">KJO</span>
-                        <span class="app-open-link">Open</span>
+            <div class="apps-bubble-grid kjo-bubble-grid">
+                <a class="app-bubble kjo-bubble" href="https://www.kjo.com.sa/irj/portal/anonymous" target="_blank" rel="noopener noreferrer" style="--bubble-logo: url('/images/logo.png');">
+                    <span class="app-bubble-badge kjo-badge">KJO</span>
+                    <div class="app-bubble-core">
+                        <div class="app-bubble-icon kjo-bubble-icon">KW</div>
+                        <h3>KJO Website</h3>
+                        <p class="app-bubble-mini">Corporate website</p>
+                        <div class="app-bubble-overlay">
+                            <strong>KJO Website</strong>
+                            <span>Official KJO public website.</span>
+                            <em>Open</em>
+                        </div>
                     </div>
                 </a>
 
-                <a class="app-tile kjo-card" href="https://intranetapplications.kjo.com.sa/KJODashboard/Dashboard.jsp" target="_blank" rel="noopener noreferrer">
-                    <div class="app-tile-top">
-                        <span class="app-tile-badge kjo-badge">KJO</span>
-                        <span class="app-tile-arrow">↗</span>
-                    </div>
-                    <div class="app-tile-logo"><span>IN</span></div>
-                    <h3>KJO Intranet Portal</h3>
-                    <p>Main internal dashboard and KJO portal services.</p>
-                    <div class="app-tile-meta">
-                        <span class="app-chip">Portal</span>
-                        <span class="app-chip">Internal</span>
-                    </div>
-                    <div class="app-tile-footer">
-                        <span class="app-chip">KJO</span>
-                        <span class="app-open-link">Open</span>
+                <a class="app-bubble kjo-bubble" href="https://intranetapplications.kjo.com.sa/KJODashboard/Dashboard.jsp" target="_blank" rel="noopener noreferrer" style="--bubble-logo: url('/images/logo.png');">
+                    <span class="app-bubble-badge kjo-badge">KJO</span>
+                    <div class="app-bubble-core">
+                        <div class="app-bubble-icon kjo-bubble-icon">IN</div>
+                        <h3>KJO Intranet Portal</h3>
+                        <p class="app-bubble-mini">Internal dashboard</p>
+                        <div class="app-bubble-overlay">
+                            <strong>KJO Intranet Portal</strong>
+                            <span>Main internal dashboard and KJO portal services.</span>
+                            <em>Open</em>
+                        </div>
                     </div>
                 </a>
 
-                <a class="app-tile kjo-card" href="https://my.kjo.com.sa/sap/bc/ui2/flp?sap-client=100&amp;sap-language=EN" target="_blank" rel="noopener noreferrer">
-                    <div class="app-tile-top">
-                        <span class="app-tile-badge kjo-badge">KJO</span>
-                        <span class="app-tile-arrow">↗</span>
-                    </div>
-                    <div class="app-tile-logo"><span>ES</span></div>
-                    <h3>My KJO (ESS)</h3>
-                    <p>Employee self-services and SAP access.</p>
-                    <div class="app-tile-meta">
-                        <span class="app-chip">ESS</span>
-                        <span class="app-chip">SAP</span>
-                    </div>
-                    <div class="app-tile-footer">
-                        <span class="app-chip">Employee</span>
-                        <span class="app-open-link">Open</span>
+                <a class="app-bubble kjo-bubble" href="https://my.kjo.com.sa/sap/bc/ui2/flp?sap-client=100&amp;sap-language=EN" target="_blank" rel="noopener noreferrer" style="--bubble-logo: url('/images/logo.png');">
+                    <span class="app-bubble-badge kjo-badge">KJO</span>
+                    <div class="app-bubble-core">
+                        <div class="app-bubble-icon kjo-bubble-icon">ES</div>
+                        <h3>My KJO (ESS)</h3>
+                        <p class="app-bubble-mini">Employee self-service</p>
+                        <div class="app-bubble-overlay">
+                            <strong>My KJO (ESS)</strong>
+                            <span>Employee self-services and SAP access.</span>
+                            <em>Open</em>
+                        </div>
                     </div>
                 </a>
 
-                <a class="app-tile kjo-card" href="http://clm.kjo.com.sa/" target="_blank" rel="noopener noreferrer">
-                    <div class="app-tile-top">
-                        <span class="app-tile-badge kjo-badge">KJO</span>
-                        <span class="app-tile-arrow">↗</span>
-                    </div>
-                    <div class="app-tile-logo"><span>CL</span></div>
-                    <h3>CLM</h3>
-                    <p>Contract Lifecycle Management platform.</p>
-                    <div class="app-tile-meta">
-                        <span class="app-chip">Contracts</span>
-                        <span class="app-chip">Lifecycle</span>
-                    </div>
-                    <div class="app-tile-footer">
-                        <span class="app-chip">Corporate</span>
-                        <span class="app-open-link">Open</span>
+                <a class="app-bubble kjo-bubble" href="http://clm.kjo.com.sa/" target="_blank" rel="noopener noreferrer" style="--bubble-logo: url('/images/logo.png');">
+                    <span class="app-bubble-badge kjo-badge">KJO</span>
+                    <div class="app-bubble-core">
+                        <div class="app-bubble-icon kjo-bubble-icon">CL</div>
+                        <h3>CLM</h3>
+                        <p class="app-bubble-mini">Contract lifecycle</p>
+                        <div class="app-bubble-overlay">
+                            <strong>CLM</strong>
+                            <span>Contract Lifecycle Management platform.</span>
+                            <em>Open</em>
+                        </div>
                     </div>
                 </a>
 
-                <a class="app-tile kjo-card" href="https://msd.kjo.com.sa/" target="_blank" rel="noopener noreferrer">
-                    <div class="app-tile-top">
-                        <span class="app-tile-badge kjo-badge">KJO</span>
-                        <span class="app-tile-arrow">↗</span>
-                    </div>
-                    <div class="app-tile-logo"><span>MS</span></div>
-                    <h3>MSD Portal</h3>
-                    <p>Corporate MSD services portal.</p>
-                    <div class="app-tile-meta">
-                        <span class="app-chip">Services</span>
-                        <span class="app-chip">Corporate</span>
-                    </div>
-                    <div class="app-tile-footer">
-                        <span class="app-chip">KJO</span>
-                        <span class="app-open-link">Open</span>
+                <a class="app-bubble kjo-bubble" href="https://msd.kjo.com.sa/" target="_blank" rel="noopener noreferrer" style="--bubble-logo: url('/images/logo.png');">
+                    <span class="app-bubble-badge kjo-badge">KJO</span>
+                    <div class="app-bubble-core">
+                        <div class="app-bubble-icon kjo-bubble-icon">MS</div>
+                        <h3>MSD Portal</h3>
+                        <p class="app-bubble-mini">Corporate services</p>
+                        <div class="app-bubble-overlay">
+                            <strong>MSD Portal</strong>
+                            <span>Corporate MSD services portal.</span>
+                            <em>Open</em>
+                        </div>
                     </div>
                 </a>
 
-                <a class="app-tile kjo-card" href="http://kjoelearn.kjo.com.sa/" target="_blank" rel="noopener noreferrer">
-                    <div class="app-tile-top">
-                        <span class="app-tile-badge kjo-badge">KJO</span>
-                        <span class="app-tile-arrow">↗</span>
-                    </div>
-                    <div class="app-tile-logo"><span>EL</span></div>
-                    <h3>eLearning</h3>
-                    <p>Learning and training portal for KJO employees.</p>
-                    <div class="app-tile-meta">
-                        <span class="app-chip">Learning</span>
-                        <span class="app-chip">Training</span>
-                    </div>
-                    <div class="app-tile-footer">
-                        <span class="app-chip">Employee</span>
-                        <span class="app-open-link">Open</span>
+                <a class="app-bubble kjo-bubble" href="http://kjoelearn.kjo.com.sa/" target="_blank" rel="noopener noreferrer" style="--bubble-logo: url('/images/logo.png');">
+                    <span class="app-bubble-badge kjo-badge">KJO</span>
+                    <div class="app-bubble-core">
+                        <div class="app-bubble-icon kjo-bubble-icon">EL</div>
+                        <h3>eLearning</h3>
+                        <p class="app-bubble-mini">Training platform</p>
+                        <div class="app-bubble-overlay">
+                            <strong>eLearning</strong>
+                            <span>Learning and training portal for KJO employees.</span>
+                            <em>Open</em>
+                        </div>
                     </div>
                 </a>
 
-                <a class="app-tile kjo-card" href="https://amer.kjo.com.sa/dwp/app/#/catalog" target="_blank" rel="noopener noreferrer">
-                    <div class="app-tile-top">
-                        <span class="app-tile-badge kjo-badge">KJO</span>
-                        <span class="app-tile-arrow">↗</span>
-                    </div>
-                    <div class="app-tile-logo"><span>AM</span></div>
-                    <h3>KJO ID Helpdesk (AMER)</h3>
-                    <p>Identity and helpdesk services for access and support.</p>
-                    <div class="app-tile-meta">
-                        <span class="app-chip">Support</span>
-                        <span class="app-chip">Identity</span>
-                    </div>
-                    <div class="app-tile-footer">
-                        <span class="app-chip">Employee</span>
-                        <span class="app-open-link">Open</span>
+                <a class="app-bubble kjo-bubble" href="https://amer.kjo.com.sa/dwp/app/#/catalog" target="_blank" rel="noopener noreferrer" style="--bubble-logo: url('/images/logo.png');">
+                    <span class="app-bubble-badge kjo-badge">KJO</span>
+                    <div class="app-bubble-core">
+                        <div class="app-bubble-icon kjo-bubble-icon">AM</div>
+                        <h3>KJO ID Helpdesk</h3>
+                        <p class="app-bubble-mini">Identity &amp; support</p>
+                        <div class="app-bubble-overlay">
+                            <strong>KJO ID Helpdesk</strong>
+                            <span>Identity and helpdesk services for access and support.</span>
+                            <em>Open</em>
+                        </div>
                     </div>
                 </a>
             </div>
